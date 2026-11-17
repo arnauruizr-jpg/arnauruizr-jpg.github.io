@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Arnau Ruiz Roca | Marketing, contenido y comunidad</title>
 <meta name="description" content="Portfolio de Arnau Ruiz Roca: marketing, contenido y redes sociales.">
+<link rel="alternate" hreflang="es" href="index.html">
+<link rel="alternate" hreflang="en" href="en/index.html">
+<link rel="alternate" hreflang="ja" href="ja/index.html">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&amp;family=Hanken+Grotesk:wght@400..700&amp;display=swap">
 <style>
 body{margin:0}
@@ -22,9 +25,19 @@ a:focus-visible{outline:3px solid #FFB38A;outline-offset:4px}
 @media (max-width: 760px){.tag{display:none!important}.mlist{display:flex}.scene{height:340px!important;margin-top:24px!important}.mwrap{padding:0 20px!important}.mh1{font-size:44px!important}.mh1 .pill{white-space:normal!important}.mtag{display:none}.mnav a{padding:0 12px!important}}
 @media (prefers-reduced-motion: reduce){.peak,.tag,.tag .more{transition:none}.drift{animation:none}.tag:hover,.tag:focus-visible{transform:translate(-50%,-100%)}}
 </style>
+<style>
+.lang-switch{position:fixed;right:14px;bottom:14px;z-index:60;display:flex;gap:2px;padding:4px;border-radius:999px;background:rgba(255,255,255,.96);box-shadow:0 6px 20px rgba(10,14,69,.22),0 0 0 1px rgba(22,24,43,.08);font:700 13px/1 'Hanken Grotesk',system-ui,sans-serif}
+.lang-switch a{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:40px;padding:0 10px;border-radius:999px;color:#16182B;text-decoration:none}
+.lang-switch a[aria-current]{background:#2A35D8;color:#fff}
+.lang-switch a:focus-visible{outline:3px solid #FF8F5E;outline-offset:2px}
+html[lang=ja] body{line-break:strict;overflow-wrap:anywhere}
+html[lang=ja] .stop .sh{display:none!important}
+html[lang=ja] h1,html[lang=ja] h2,html[lang=ja] h3{word-break:keep-all;overflow-wrap:anywhere}
+</style>
 </head>
 <body>
 <div id="dc-root"></div>
+<nav class="lang-switch" aria-label="Idioma · Language · 言語"><a href="index.html" hreflang="es" lang="es" aria-current="page">ES</a><a href="en/index.html" hreflang="en" lang="en">EN</a><a href="ja/index.html" hreflang="ja" lang="ja">日本語</a></nav>
 <template id="dc-tpl">
 
 <div style="background: {{cobalt}}; color: #FFFFFF; font-family: 'Hanken Grotesk', system-ui, sans-serif; width: 100%; overflow: hidden">
