@@ -14,7 +14,7 @@ body{margin:0}
 a{color:#1E2B4F}
 .trainpos{transition:left .7s cubic-bezier(.65,0,.35,1)}
 .stop{transition:transform .25s}.stop:hover{transform:translateY(-3px)}
-.arrive{animation:arrive .6s .35s cubic-bezier(.22,1,.36,1) both}
+.arrive{animation:arrive .4s .1s cubic-bezier(.22,1,.36,1) both}
 @keyframes arrive{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
 .pass{animation:pass .5s cubic-bezier(.55,0,.35,1) forwards}
 @keyframes pass{from{transform:translateX(105%)}to{transform:translateX(-105%)}}
@@ -25,6 +25,8 @@ a:focus-visible,button:focus-visible{outline:3px solid #1E2B4F;outline-offset:3p
 .dark a:focus-visible,.dark button:focus-visible{outline-color:#F2C230}
 @media (max-width: 760px){.jhd{padding:8px 18px!important;gap:4px 12px!important}.jhd .anden{order:3;width:100%;font-size:14px;gap:8px!important}.jhd .anden .num{width:26px!important;height:26px!important;font-size:14px!important}.jwrap{padding-left:16px!important;padding-right:16px!important}.jhero{padding-top:26px!important;gap:22px!important}.jphoto{min-height:260px!important}.jmap{padding:16px 12px 12px!important}.jmap .ctrl{width:100%;flex-wrap:wrap;justify-content:space-between}.jmap .ctrl .nx{order:5;flex:1 1 100%;justify-content:center;white-space:nowrap;padding:0 16px!important}.jmap .ctrl .fromstart{white-space:nowrap}.train{transform:scale(.68);transform-origin:50% 100%}.stop{min-width:0!important;padding-left:0!important;padding-right:0!important}.stop .code,.stop .es{display:none!important}.stop .kj{font-size:13px!important}.stop .sh{display:block!important}.stop{gap:3px!important}.jsign{padding:16px 14px 12px!important;gap:12px!important}.jsign .kana{font-size:34px!important;letter-spacing:.02em!important}.jsign .sp{display:none}.jsign .arbox{width:52px!important;height:52px!important}.jbar button,.jbar a{padding:0 14px!important}.jbar .rj{display:none}.jstory{padding:26px 0 36px!important;gap:24px!important}.jstory h2{font-size:28px!important}}
 @media (prefers-reduced-motion: reduce){.trainpos,.stop{transition:none}.stop:hover{transform:none}.arrive,.blink{animation:none}.pass{display:none}}
+
+.jstory{scroll-margin-top:100px}.jstory figure{align-self:flex-start}.jstory h2{max-width:24ch}.jstory p{overflow-wrap:break-word}@media(max-width:760px){.stop .sh{font-size:11px!important;line-height:1.2;display:block!important}.jstory>div{flex-basis:100%!important}.jstory p{font-size:17px!important;line-height:1.75!important}}
 </style>
 <style>
 .lang-switch{position:fixed;right:14px;bottom:14px;z-index:60;display:flex;gap:2px;padding:4px;border-radius:999px;background:rgba(255,255,255,.96);box-shadow:0 6px 20px rgba(10,14,69,.22),0 0 0 1px rgba(22,24,43,.08);font:700 13px/1 'Hanken Grotesk',system-ui,sans-serif}
@@ -183,7 +185,7 @@ html[lang=ja] h1,html[lang=ja] h2,html[lang=ja] h3{word-break:keep-all;overflow-
 </div>
 <div style="flex: 1 1 380px; min-width: 0">
 <h2 style="margin: 0; font-family: 'Zen Kaku Gothic New', sans-serif; font-weight: 900; font-size: 34px; line-height: 1.1">{{cur.title}}</h2>
-<p style="margin: 16px 0 0; font-size: 18px; line-height: 1.6">{{cur.text}}</p>
+<sc-for list="{{cur.paragraphs}}" as="paragraph" hint-placeholder-count="3"><p style="margin: 18px 0 0; max-width: 65ch; font-size: 18px; line-height: 1.75">{{paragraph}}</p></sc-for>
 <sc-if value="{{cur.pendingText}}" hint-placeholder-val="{{ false }}">
 <p style="margin: 16px 0 0; padding: 12px 14px; border: 2px dashed #C99A00; border-radius: 6px; background: #FFF7D6; font-size: 15px; line-height: 1.5; color: #5A4500">{{cur.pending}}</p>
 </sc-if>
@@ -220,6 +222,7 @@ constructor(props) { super(props); let s = 0; try { s = parseInt(window.sessionS
 remember(k) { try { window.sessionStorage.setItem('arnau-jp-stop', String(k)); } catch (e) {} }
 renderVals() {
 const masia = 'マテウ・ビジャレット（Masia）の推薦状からの引用。原文は英語。';
+const STORIES = [["慣れた場所を離れ、自分の居場所を見つける。", "日本へ行くことは、それまでの生活を離れて、新しい暮らしをつくることでした。働き、日本語を学び、現地の人と関わりながら日本を知りたいと思っていました。想像することと、実際に生活することは違いました。", "言葉や文化が違うと、日常の小さな場面にも注意が必要です。周りを見て、質問し、最初からすべて理解できなくてもよいと受け止める。その積み重ねが、自分の居場所を見つける過程でした。", "この写真も、街を歩き、移動し、荷物を運ぶ日常の一場面です。暮らすことを通して、少しずつ日本を知っていきました。"], ["毎日の暮らしで使う日本語。", "日本語は、仕事や人との交流、周りで起きていることを理解するために必要なものになりました。言葉を学ぶことと、日本の生活に慣れることは、つながっていました。", "単語だけでなく、状況や相手との話し方にも目を向ける必要がありました。間違えたら、その理由を考えてもう一度試す。実践しながら学ぶ方法は、自分に合っていると思います。", "今も日本語は基礎レベルで、学ぶことがたくさんあります。大切なのは、言葉を使って人に近づき、生活に参加できたことです。マテウの推薦状には、職場での成長について書かれています。"], ["銀座のレストランで働きながら学ぶ。", "東京では、銀座のカタルーニャ料理店Masiaでホールの仕事をしました。お客様を迎え、サービスのチームと協力する仕事です。日本語を学びながら、新しい環境にも慣れていきました。", "人と接することは、以前から好きでした。違う文化の中で、相手の期待に耳を傾け、伝え方を考える。細部への気配りや同僚との連携も、毎日の仕事の一部でした。", "ここでの職務は接客で、マーケティングの仕事ではありません。今につながっているのは、人を理解し、状況に合わせてコミュニケーションを調整した経験です。一緒に働き、周囲を観察する中で学ぶことも多くありました。"], ["知らなかった場所が日常になる。", "日本での生活には、仕事だけでなく、移動やその合間の時間もありました。地下鉄の写真も、その一部です。最初は理解しようとしていた街が、少しずつ身近になっていきました。", "日本の人たちとの交流を通して、旅行とは違う距離で文化に触れました。習慣や伝え方の違いを知り、自分の当たり前も見直すようになりました。大切なのは、完璧に合わせることより、聞いて学ぶ姿勢でした。", "仕事や普段の移動を離れ、ほかの場所を訪れる時間もありました。川の写真は、そんな滞在の一面です。暮らしに慣れることと、新しい場所を楽しむこと。その両方が思い出になっています。"], ["街の伝え方にも目を向ける。", "マーケティングを学んだこともあり、店や商品の見せ方、メッセージの伝え方にも関心がありました。この写真には、建物の壁にさまざまな看板が並ぶ商店街が写っています。", "何に目が留まり、何が理解しにくいのか。言葉や地域の慣習にまだ不慣れだったからこそ、普段なら見過ごすかもしれないことにも気づきました。", "日本のブランドのキャンペーンを担当したわけではなく、滞在中の個人的な観察です。伝えたい内容だけでなく、誰が、どのような背景で受け取るのかも重要だと、改めて考える機会になりました。"], ["新しいことに向き合う姿勢を持ち帰る。", "言葉を学び、働き、違う文化の人たちと関わりながら、新しい環境で暮らしをつくる経験ができました。すべてを知っている必要はなく、学ぶ姿勢を持つことが大切な時間でした。", "試して、慣れて、間違いから学ぶ。日本では、仕事でも日常でも、その姿勢を実践する機会がありました。", "今はコンテンツ制作とコミュニティ運営の中で学び続けています。アイデアを出し、チームの意見を聞き、一緒に形にしていく。富士山の写真でこの旅を締めくくりますが、そこでの経験は今の仕事にもつながっています。"]];
 const S = [
 { kanji: '到着', kana: 'とうちゃく', romaji: 'Tōchaku', es: '到着', title: '到着は、​始まりに​すぎなかった。',
 text: '日本へ行くことは、慣れたものを手放し、別の場所で生活を一から築くことでした。言葉を学び、働き、人々を知りたかった。現地では、毎日の暮らしをこなすことから学びました。',
@@ -236,11 +239,11 @@ quoteNote: masia + ' 訳：「高級レストランの厳しい基準にすぐ�
 { kanji: '日常', kana: 'にちじょう', romaji: 'Nichijō', es: '日常', title: '訪れる場所から、​暮らす場所へ。',
 text: '街を移動し、働き、日本の人たちと関わるうちに、新しい場所が日常になっていきました。日本の習慣に馴染むことで、自分の国の習慣も違う目で見られるようになりました。',
 photos: [
-{ src: '../img/japon-metro.jpg', ratio: '1 / 2', pos: '100% 50%', alt: '地下鉄の車内でスマートフォンを見るアルナウ', cap: 'いつもの通勤。' },
-{ src: '../img/japon-bici-rio.jpg', ratio: '1 / 2', pos: '30% 70%', alt: '川沿いの自転車と、奥に見える鉄橋', cap: '日本で過ごした日々。' }] },
+{ src: '../img/japon-metro.jpg', ratio: '4 / 5', pos: '55% 50%', alt: '地下鉄の車内でスマートフォンを見るアルナウ', cap: 'いつもの通勤。' },
+{ src: '../img/japon-rio-montanas.jpg', ratio: '4 / 5', pos: '50% 50%', alt: '日本滞在中に見た川と山々', cap: '日本で過ごした日々。' }] },
 { kanji: '観察', kana: 'かんさつ', romaji: 'Kansatsu', es: 'コミュニケーションとブランド', title: '違う目で見る。',
 text: 'お店やメッセージ、人への接し方にも目を向けていました。マーケティングを学んでいたので、スペインとの違いが気になったのです。教室の外での、コミュニケーションへの個人的な観察でした。',
-photos: [{ src: '../img/japon-carteles.jpg', ratio: '4 / 3', pos: '50% 18%', alt: '店やブランドのネオン看板が並ぶ通り', cap: '日本で過ごした日々。' }] },
+photos: [{ src: '../img/japon-bici-rio.jpg', ratio: '3 / 4', pos: '50% 50%', alt: '店やブランドのネオン看板が並ぶ通り', cap: '日本で過ごした日々。' }] },
 { kanji: '次へ', kana: 'つぎへ', romaji: 'Tsugi e', es: '持ち帰ったもの', title: '旅は、​今の仕事ぶりの​中で続いている。',
 text: '別の環境で生活を築いた経験と、これからも学び続ける言葉を持ち帰りました。そして、新しい状況に向き合い、すべてが分からなくても前に進み続ける自信も。', last: true,
 photos: [{ src: '../img/viajes-fuji.jpg', ratio: '4 / 5', pos: '50% 60%', alt: '街の上、雲の間に見える富士山', cap: '雲間の富士山。' }] }
@@ -250,7 +253,7 @@ const i = Math.max(0, Math.min(n - 1, this.state.i));
 const moves = this.state.moves;
 const go = (k) => () => { const t = Math.max(0, Math.min(n - 1, k)); if (t !== i) { this.remember(t); this.setState({ i: t, moves: moves + 1 }); } };
 const stations = S.map((s, k) => ({ ...s, code: 'AR ' + String(k + 1).padStart(2, '0'), current: k === i ? 'step' : 'false', dot: k === i ? '#1E2B4F' : '#FFFFFF', labelColor: k === i ? '#1E2B4F' : '#555B66', aria: '駅 ' + (k + 1) + ': ' + s.es + (k === i ? '（現在地）' : ''), short: ['到着', '日本語', '仕事', '日常', 'ブランド', '学び'][k], pick: go(k) }));
-const cur = { ...S[i], num: String(i + 1).padStart(2, '0'), photos: S[i].photos || [], genko: !!S[i].genko, noPhoto: !!S[i].noPhoto, pendingText: !!S[i].pendingText, hasQuote: !!S[i].hasQuote, masia: !!S[i].masia, last: !!S[i].last };
+const cur = { ...S[i], title: STORIES[i][0], paragraphs: STORIES[i].slice(1), num: String(i + 1).padStart(2, '0'), photos: S[i].photos || [], genko: !!S[i].genko, noPhoto: !!S[i].noPhoto, pendingText: !!S[i].pendingText, hasQuote: !!S[i].hasQuote, masia: !!S[i].masia, last: !!S[i].last };
 const prev = S[i - 1], next = S[i + 1];
 const genko = 'にほんごをまなぶまいにち'.split('').concat(['', '', '']).map((c) => ({ c }));
 return {
