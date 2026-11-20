@@ -72,7 +72,50 @@ html[lang=ja] body{line-break:strict;overflow-wrap:anywhere}
 html[lang=ja] .stop .sh{display:none!important}
 html[lang=ja] h1,html[lang=ja] h2,html[lang=ja] h3{word-break:keep-all;overflow-wrap:anywhere}
 </style>
-</head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&amp;display=swap">
+<style>
+/* Portfolio landscape composition. */
+.entry{min-height:100svh;background:radial-gradient(ellipse at 66% 40%,#4559c5 0%,#25378e 52%,#14225f 100%)!important}
+.entry .entry-intro{max-width:none!important;padding:0 5vw!important}
+.entry .entry-intro header{padding-top:20px!important}
+.entry .scene{flex:1 0 530px;min-height:530px;margin-top:0!important;isolation:isolate}
+.portfolio-title{position:absolute;z-index:1;left:3%;top:7px;width:94%;height:28vw;max-height:410px;margin:0;pointer-events:none}
+.portfolio-title svg{display:block;width:100%;height:100%;overflow:visible}
+.portfolio-title text{font-family:'Anton',Impact,sans-serif;font-weight:400;font-size:350px;fill:#fff4df;letter-spacing:-3px}
+.portfolio-subtitle{position:absolute;z-index:7;left:6%;top:45%;margin:0;font-family:'Hanken Grotesk',sans-serif;font-size:clamp(22px,2.1vw,32px);line-height:1.12;font-weight:500;letter-spacing:-.025em;color:#fff4df}
+.entry .scene .sun{left:79%!important;top:26%!important;width:180px!important;height:180px!important;margin-left:-90px!important;transform:none!important}
+.entry .scene .tag>span:first-child{min-width:128px!important;padding:8px 12px!important;border-radius:10px!important}
+.entry .scene .tag>span:first-child>span:first-child{font-size:10px!important;letter-spacing:.09em!important}
+.entry .scene .tag>span:first-child>span:nth-child(2){font-size:18px!important}
+.entry .scene .tag[data-route="01"]{top:73%!important}
+.entry .scene .tag[data-route="02"]{top:64%!important}
+.entry .scene .tag[data-route="03"]{top:56%!important}
+.entry .scene .tag[data-route="04"]{top:63%!important}
+.entry-footer{background:#0A0E45!important}
+.entry-footer>.mwrap{max-width:none!important;padding:15px 5vw 22px!important}
+.drift{animation:none!important}
+@media(min-width:761px) and (max-height:760px){.entry .scene{min-height:460px;flex-basis:460px}.portfolio-title{height:26vw;max-height:320px}.portfolio-subtitle{top:43%;font-size:24px}}
+@media(max-width:760px){.entry .entry-intro{padding:0 20px!important}.entry .entry-intro header{padding-top:14px!important}.entry .scene{flex:1 0 480px;min-height:480px;margin-top:0!important}.portfolio-title{left:3%;width:94%;top:28px;height:29vw;max-height:none}.portfolio-subtitle{left:6%;top:32%;font-size:22px;line-height:1.1}.entry .scene .sun{left:78%!important;top:30%!important;width:118px!important;height:118px!important;margin-left:-59px!important}.entry .mlist{padding-bottom:62px!important}.entry .scene .peak{height:var(--mobile-height)!important}.entry .scene .peak[data-route="01"]{--mobile-height:42%}.entry .scene .peak[data-route="02"]{--mobile-height:57%}.entry .scene .peak[data-route="03"]{--mobile-height:72%}.entry .scene .peak[data-route="04"]{--mobile-height:62%}}
+</style>
+<style>
+/* Sunlight and a moving color wash on the letters. */
+.portfolio-title .title-lit{fill:url(#letter-warmth)!important}
+.entry .scene .sun{--sun-size:164px;left:0!important;top:0!important;z-index:2!important;width:var(--sun-size)!important;height:var(--sun-size)!important;margin:0!important;transform:translate3d(var(--sun-x,50vw),var(--sun-y,250px),0)!important;background:radial-gradient(circle at 36% 28%,#fff2bc 0%,#ffdb78 38%,#f5b53d 77%,#e98c2c 100%)!important;box-shadow:0 0 20px 7px #ffd48288,0 0 65px 30px #ffb24c55,0 0 125px 75px #ffb24c1a!important;pointer-events:none}
+.entry .scene .tag{z-index:12!important}
+@media(max-width:760px){.entry .scene .sun{--sun-size:78px}.entry .scene .peak[data-route="03"]{--mobile-height:82%}.portfolio-title{top:42px}}
+</style>
+<style>
+.entry .scene .peak[data-route="01"],.entry .scene .peak[data-route="04"]{z-index:5!important}
+.entry .scene .peak[data-route="02"]{z-index:4!important}
+.entry .scene .peak[data-route="03"]{z-index:3!important}
+</style><style>
+/* Clean entry: only the landscape above and one quiet shortcut below. */
+.entry .entry-footer{padding:18px 230px 22px 5vw!important;min-height:32px;box-sizing:content-box;background:#0A0E45!important}
+.entry .direct-link{margin:0;font:400 14px/1.6 'Hanken Grotesk',sans-serif;color:#c9cde0}
+.entry .direct-link a{color:#f6f4ec!important;font-weight:500;text-underline-offset:4px;text-decoration-thickness:1px}
+.entry .direct-link a:hover{color:white!important}
+@media(max-width:760px){.entry .entry-footer{display:block!important;padding:14px 20px 76px!important;min-height:0}.entry .direct-link{font-size:13px;text-align:center}.entry .mlist{padding-bottom:10px!important}.portfolio-title{top:22px}}
+</style></head>
 <body>
 <div id="dc-root"></div>
 <nav class="lang-switch" aria-label="Idioma · Language · 言語"><a href="../index.html" hreflang="es" lang="es">ES</a><a href="index.html" hreflang="en" lang="en" aria-current="page">EN</a><a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a></nav>
@@ -80,25 +123,20 @@ html[lang=ja] h1,html[lang=ja] h2,html[lang=ja] h3{word-break:keep-all;overflow-
 
 <div class="entry" style="background: {{cobalt}}; color: #FFFFFF; font-family: 'Hanken Grotesk', system-ui, sans-serif; width: 100%; overflow: hidden">
 
-<div class="mwrap entry-intro" style="max-width: 1280px; margin: 0 auto; padding: 0 48px; box-sizing: border-box">
-<header style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 22px 0 0; flex-wrap: wrap">
-<a href="index.html" aria-label="Arnau Ruiz Roca, home" style="display: inline-flex; align-items: center; gap: 12px; min-height: 44px; color: #FFFFFF; text-decoration: none">
-<svg width="46" height="26" viewBox="0 0 46 26" aria-hidden="true"><polyline points="1,24 12,10 18,16 28,3 37,13 45,24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="28" cy="3" r="2.6" fill="{{apricot}}"></circle></svg>
-<span style="display: flex; flex-direction: column; line-height: 1"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 19px; letter-spacing: -.01em">Arnau Ruiz Roca</span><span class="mtag" style="margin-top: 4px; font-size: 11px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; opacity: .7">Marketing · Content · Community</span></span>
-</a>
-<nav class="mnav" aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 6px">
-<a href="trabajos.html" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 15px">Work</a>
-<a href="quien-soy.html" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border-radius: 999px; background: {{apricot}}; color: #17171C; text-decoration: none; font-weight: 700; font-size: 15px">About me</a>
-</nav>
-</header>
 
-<section style="display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 28px; padding: 40px 0 0">
-<h1 class="mh1" style="flex: 999 1 560px; min-width: 0; margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(42px, 6.2vw, 86px); line-height: .95; letter-spacing: -.035em">I love the mountains. So let me show you my path, <span class="pill" style="background: {{apricot}}; color: #17171C; border-radius: 999px; padding: 0 .2em .04em; white-space: nowrap; -webkit-box-decoration-break: clone; box-decoration-break: clone">peak by peak.</span></h1>
-<p style="margin: 0; flex: 1 1 300px; max-width: 380px; font-size: 18px; line-height: 1.55; color: rgba(255,255,255,.9)"><strong>Choose a stage or go straight to my work.</strong></p>
-</section>
-</div>
 
-<section aria-label="The route: choose a mountain" class="scene" style="position: relative; height: 600px; max-width: 1440px; margin: 10px auto 0">
+<section aria-label="La ruta: elige una montaña" class="scene" style="position: relative; height: 600px; max-width: 1440px; margin: 10px auto 0">
+<h1 class="portfolio-title" aria-label="Portfolio"><svg viewBox="0 0 1400 400" role="img" aria-label="Portfolio">
+<defs>
+<linearGradient id="letter-warmth" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe59b"/><stop offset=".5" stop-color="#ffbc52"/><stop offset="1" stop-color="#f17936"/></linearGradient>
+<radialGradient id="light-mask-gradient" gradientUnits="userSpaceOnUse" cx="760" cy="286" r="285"><stop offset="0" stop-color="white"/><stop offset=".46" stop-color="white"/><stop offset=".78" stop-color="#888"/><stop offset="1" stop-color="black"/></radialGradient>
+<mask id="letter-light-mask" maskUnits="userSpaceOnUse" x="-1000" y="-1000" width="3400" height="2400"><rect x="-1000" y="-1000" width="3400" height="2400" fill="url(#light-mask-gradient)"/></mask>
+</defs>
+<text class="title-base" x="700" y="315" text-anchor="middle" textLength="1310" lengthAdjust="spacingAndGlyphs">PORTFOLIO</text>
+<text class="title-lit" x="700" y="315" text-anchor="middle" textLength="1310" lengthAdjust="spacingAndGlyphs" mask="url(#letter-light-mask)" aria-hidden="true">PORTFOLIO</text>
+</svg></h1>
+
+
 <sc-for list="{{stars}}" as="st" hint-placeholder-count="14"><span aria-hidden="true" style="position: absolute; left: {{st.x}}; top: {{st.y}}; width: {{st.s}}; height: {{st.s}}; border-radius: 50%; background: #FFFFFF; opacity: {{st.o}}"></span></sc-for>
 <div class="sun" aria-hidden="true" style="position: absolute; width: 200px; height: 200px; margin-left: -100px; border-radius: 50%; background: #F2C230; box-shadow: 0 0 0 34px rgba(242,194,48,.12), 0 0 0 80px rgba(242,194,48,.06), 0 0 120px 40px rgba(242,194,48,.18)"></div>
 <div aria-hidden="true" style="position: absolute; left: 0; right: 0; bottom: 0; height: 66%; background: linear-gradient(#5562EC, #4652E6); clip-path: polygon(0 100%, 0 40%, 5% 30%, 9% 36%, 14% 20%, 19% 32%, 25% 16%, 31% 30%, 36% 24%, 42% 38%, 48% 18%, 53% 30%, 60% 22%, 67% 36%, 74% 14%, 80% 28%, 86% 20%, 92% 34%, 100% 24%, 100% 100%)"></div>
@@ -127,7 +165,7 @@ html[lang=ja] h1,html[lang=ja] h2,html[lang=ja] h3{word-break:keep-all;overflow-
 <span style="display: flex; flex-direction: column; align-items: flex-start; min-width: 150px; padding: 10px 14px; border-radius: 12px; background: rgba(255,255,255,.96); box-shadow: 0 12px 30px rgba(10,14,69,.35)">
 <span style="font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: {{p.accent}}">{{p.num}} · {{p.kicker}}</span>
 <span style="margin-top: 2px; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 19px; white-space: nowrap">{{p.name}}</span>
-<span class="more" style="display: block; font-size: 13px; line-height: 1.35; color: #3A3E47; max-width: 200px">{{p.desc}} <strong style="color: #17171C">Enter →</strong></span>
+<span class="more" style="display: block; font-size: 13px; line-height: 1.35; color: #3A3E47; max-width: 200px">{{p.desc}} <strong style="color: #17171C">Entrar →</strong></span>
 </span>
 <span style="width: 2px; height: 26px; background: rgba(255,255,255,.9)"></span>
 <span style="width: 10px; height: 10px; border-radius: 50%; background: #FFFFFF; box-shadow: 0 0 0 4px {{p.ring}}"></span>
@@ -135,18 +173,13 @@ html[lang=ja] h1,html[lang=ja] h2,html[lang=ja] h3{word-break:keep-all;overflow-
 </sc-for>
 </section>
 
-<nav class="mlist" aria-label="Stages" style="flex-direction: column; gap: 8px; padding: 18px 22px 8px; background: #0A0E45">
+<nav class="mlist" aria-label="Etapas" style="flex-direction: column; gap: 8px; padding: 18px 22px 8px; background: #0A0E45">
 <sc-for list="{{peaks}}" as="p" hint-placeholder-count="4">
 <a href="{{p.href}}" style="display: flex; justify-content: space-between; align-items: center; min-height: 56px; padding: 0 16px; border-radius: 12px; background: rgba(255,255,255,.08); color: #FFFFFF; text-decoration: none"><span><span style="font-size: 12px; opacity: .7">{{p.num}}</span> <strong style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 18px">{{p.name}}</strong></span><span aria-hidden="true">→</span></a>
 </sc-for>
 </nav>
 
-<div class="entry-footer" style="background: #0A0E45">
-<div class="mwrap" style="max-width: 1280px; margin: 0 auto; padding: 14px 48px 22px; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 14px; justify-content: space-between; align-items: center; font-size: 14px; color: rgba(255,255,255,.75)">
-<span>Prefer to get straight to the point? <a href="trabajos.html" style="color: {{apricot}}; font-weight: 700">Go straight to my work →</a></span>
-<span style="color: rgba(255,255,255,.55)">Arnau Ruiz Roca · Portfolio</span>
-</div>
-</div>
+<footer class="entry-footer"><p class="direct-link">Want to get straight to it? <a href="trabajos.html">View work.</a></p></footer>
 </div>
 </template>
 <script type="application/json" id="dc-props">{"cobalt":{"editor":"color","default":"#2A35D8","options":["#2A35D8","#1F2BB8","#3B2FD1","#0F5BD8"],"section":"Color"},"apricot":{"editor":"color","default":"#FFB38A","options":["#FFB38A","#FFC9A3","#FF9F7A","#F7D46B"],"section":"Color"},"$preview":{"width":1280,"height":1000}}</script>
@@ -158,22 +191,22 @@ const apricot = this.props.apricot ?? '#FFB38A';
 const none = 'polygon(0 0,0 0,0 0)';
 const P = [
 { num: '01', kicker: 'Base camp', name: 'About me', desc: 'How I work, what interests me and what I’ve learned along the way.', href: 'quien-soy.html', accent: '#C2643C', ring: 'rgba(255,179,138,.6)',
-left: 0, w: 26, h: 40, sx: .52, sy: .14, z: 4, color: '#B9684A', light: '#F1AA86',
+left: 0, w: 26, h: 43, sx: .52, sy: .14, z: 4, color: '#B9684A', light: '#F1AA86',
 clip: 'polygon(0 100%, 18% 60%, 34% 40%, 46% 22%, 52% 14%, 60% 24%, 72% 40%, 86% 62%, 100% 100%)', shade: 'rgba(110,50,30,.35)', shadeClip: 'polygon(52% 14%, 60% 24%, 72% 40%, 86% 62%, 100% 100%, 50% 100%, 56% 60%)', snow: none, snowShade: none },
 { num: '02', kicker: 'Outside work', name: 'Hobbies', desc: 'Football, mountains and jiu-jitsu. A bit of my life outside work.', href: 'aficiones.html', accent: '#2A35D8', ring: 'rgba(255,255,255,.5)',
-left: 18, w: 28, h: 64, sx: .58, sy: .03, z: 3, color: '#151C78', light: '#3747C8',
+left: 18, w: 28, h: 62, sx: .58, sy: .03, z: 3, color: '#151C78', light: '#3747C8',
 clip: 'polygon(0 100%,12% 76%,22% 55%,28% 49%,32% 40%,37% 47%,42% 50%,49% 28%,53% 23%,58% 3%,62% 14%,66% 19%,70% 26%,75% 38%,82% 46%,87% 63%,93% 77%,100% 100%)', shade: 'rgba(8,10,50,.45)', shadeClip: 'polygon(58% 3%, 70% 26%, 82% 46%, 100% 100%, 52% 100%, 60% 44%)', snow: 'polygon(50% 16%, 58% 3%, 66% 18%, 62% 16%, 58% 24%, 54% 17%)', snowShade: 'polygon(58% 3%, 66% 18%, 62% 16%, 58% 24%)' },
 { num: '03', kicker: 'Mount Fuji · 富士山', name: 'Japan', desc: 'Learning a language, working and finding my place in another culture.', href: 'japon.html', accent: '#9A7400', ring: 'rgba(242,194,48,.6)',
-left: 39, w: 36, h: 88, sx: .5, sy: .06, z: 2, color: '#12141B', light: '#353A48',
+left: 39, w: 36, h: 76, sx: .5, sy: .06, z: 2, color: '#12141B', light: '#353A48',
 clip: 'polygon(0 100%,14% 73%,22% 54%,29% 35%,36% 16%,41% 11%,44% 6%,48% 7%,52% 6%,56% 6%,60% 11%,64% 16%,72% 38%,80% 58%,90% 80%,100% 100%)', shade: 'rgba(0,0,0,.35)', shadeClip: 'polygon(50% 6%, 56% 6%, 64% 14%, 100% 100%, 46% 100%)', snow: 'polygon(36% 14%, 44% 6%, 56% 6%, 64% 14%, 66% 20%, 61% 24%, 59% 36%, 55% 26%, 52% 38%, 49% 24%, 46% 34%, 43% 24%, 38% 22%, 34% 18%)', snowShade: 'polygon(50% 6%, 56% 6%, 64% 14%, 66% 20%, 61% 24%, 59% 36%, 55% 26%, 52% 38%)' },
 { num: '04', kicker: 'Today’s peak', name: 'Work', desc: 'A selection of content and of the experiences that helped me create it.', href: 'trabajos.html', accent: '#2A35D8', ring: 'rgba(255,179,138,.7)',
-left: 68, w: 32, h: 74, sx: .58, sy: .02, z: 4, color: '#23354E', light: '#63829C',
+left: 68, w: 32, h: 68, sx: .58, sy: .02, z: 4, color: '#23354E', light: '#63829C',
 clip: 'polygon(0 100%,8% 78%,13% 72%,19% 48%,26% 33%,31% 26%,37% 30%,43% 45%,49% 18%,54% 8%,58% 2%,64% 7%,69% 17%,72% 36%,78% 23%,83% 25%,88% 44%,91% 65%,100% 100%)', shade: 'rgba(12,28,47,.50)', shadeClip: 'polygon(58% 2%,64% 7%,69% 17%,72% 36%,78% 23%,83% 25%,100% 100%,49% 100%,55% 52%,51% 23%)', snow: 'polygon(54% 8%,58% 2%,64% 7%,69% 17%,65% 15%,63% 19%,60% 12%,57% 17%,54% 13%,50% 20%)', snowShade: 'polygon(58% 2%,64% 7%,69% 17%,65% 15%,63% 19%,60% 12%,57% 17%)' }
 ];
 const peaks = P.map((p) => ({ ...p, left: p.left + '%', width: p.w + '%', height: p.h + '%',
-sx: (p.left + p.w * p.sx) + '%', sy: (100 - p.h + p.h * p.sy) + '%',
+sx: (p.left + p.w * p.sx) + '%', sy: Math.max(60,100 - p.h + p.h * p.sy) + '%',
 aria: 'Enter ' + p.name + ': ' + p.desc }));
-const trail = P.map((p) => (p.left + p.w * p.sx).toFixed(1) + ',' + (100 - p.h + p.h * p.sy).toFixed(1)).join(' ');
+const trail = P.map((p) => (p.left + p.w * p.sx).toFixed(1) + ',' + Math.max(60,100 - p.h + p.h * p.sy).toFixed(1)).join(' ');
 return {
 cobalt: this.props.cobalt ?? '#2A35D8', apricot, peaks, trail,
 stars: [[4,8,3],[9,22,2],[15,6,2],[27,14,3],[33,4,2],[41,18,2],[72,8,2],[78,22,3],[85,10,2],[91,4,3],[96,17,2],[23,26,2],[66,30,2],[12,34,2]].map(([x,y,s]) => ({ x: x + '%', y: y + '%', s: s + 'px', o: s > 2 ? .9 : .55 }))
@@ -182,6 +215,7 @@ stars: [[4,8,3],[9,22,2],[15,6,2],[27,14,3],[33,4,2],[41,18,2],[72,8,2],[78,22,3
 }
 window.Component = Component;
 </script>
-<script src="../landscape-light.js"></script>
+
+<script src="../portfolio-light.js"></script>
 </body>
 </html>
