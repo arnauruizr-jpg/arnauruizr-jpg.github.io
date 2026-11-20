@@ -44,23 +44,19 @@ a:focus-visible{outline:3px solid #FFB38A;outline-offset:4px}
 
 
 /* One light source follows the active summit, with a warm reflected face. */
-.entry .scene .sun{left:57%;top:40px;background:radial-gradient(circle at 37% 30%,#fff1bd 0%,#ffdf82 34%,#f6bd43 72%,#eda336 100%)!important;box-shadow:0 0 32px 14px #ffd78235,0 0 100px 52px #ffd7821f!important;transition:left 1.05s cubic-bezier(.22,.68,.18,1),top 1.05s cubic-bezier(.22,.68,.18,1);pointer-events:none}
+.entry .scene .sun{left:57%;top:40px;background:radial-gradient(circle at 37% 30%,#fff1bd 0%,#ffdf82 34%,#f6bd43 72%,#eda336 100%)!important;box-shadow:0 0 32px 14px #ffd78235,0 0 100px 52px #ffd7821f!important;transition:none;will-change:transform;pointer-events:none}
 .entry .scene .peak{cursor:pointer;transition:filter .55s ease}
 .entry .scene .peak:after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 48% 7%,#fff0bdbb 0%,#ffd18d66 25%,#ffc27b22 58%,transparent 85%);mix-blend-mode:screen;opacity:0;transition:opacity .55s ease}
 .entry .tag>span:first-child{transition:background .35s ease,box-shadow .35s ease}
-.entry .scene:has(.peak[data-route="01"]:hover,.tag[data-route="01"]:hover,.tag[data-route="01"]:focus-visible):not(:has(.tag:not([data-route="01"]):focus-visible)) .sun{left:13.52%;top:calc(65.6% - 90px)}
 .entry .scene:has(.peak[data-route="01"]:hover,.tag[data-route="01"]:hover,.tag[data-route="01"]:focus-visible):not(:has(.tag:not([data-route="01"]):focus-visible)) .peak[data-route="01"]{filter:brightness(1.22) saturate(1.08) drop-shadow(0 10px 18px #07102d55)}
 .entry .scene:has(.peak[data-route="01"]:hover,.tag[data-route="01"]:hover,.tag[data-route="01"]:focus-visible):not(:has(.tag:not([data-route="01"]):focus-visible)) .peak[data-route="01"]:after{opacity:.85}
 .entry .scene:has(.peak[data-route="01"]:hover,.tag[data-route="01"]:hover,.tag[data-route="01"]:focus-visible):not(:has(.tag:not([data-route="01"]):focus-visible)) .tag[data-route="01"]>span:first-child{background:#fff3dd!important;box-shadow:0 0 0 2px #ffd68b,0 10px 30px #07102d44!important}
-.entry .scene:has(.peak[data-route="02"]:hover,.tag[data-route="02"]:hover,.tag[data-route="02"]:focus-visible):not(:has(.tag:not([data-route="02"]):focus-visible)) .sun{left:34.24%;top:calc(37.92% - 90px)}
 .entry .scene:has(.peak[data-route="02"]:hover,.tag[data-route="02"]:hover,.tag[data-route="02"]:focus-visible):not(:has(.tag:not([data-route="02"]):focus-visible)) .peak[data-route="02"]{filter:brightness(1.22) saturate(1.08) drop-shadow(0 10px 18px #07102d55)}
 .entry .scene:has(.peak[data-route="02"]:hover,.tag[data-route="02"]:hover,.tag[data-route="02"]:focus-visible):not(:has(.tag:not([data-route="02"]):focus-visible)) .peak[data-route="02"]:after{opacity:.85}
 .entry .scene:has(.peak[data-route="02"]:hover,.tag[data-route="02"]:hover,.tag[data-route="02"]:focus-visible):not(:has(.tag:not([data-route="02"]):focus-visible)) .tag[data-route="02"]>span:first-child{background:#fff3dd!important;box-shadow:0 0 0 2px #ffd68b,0 10px 30px #07102d44!important}
-.entry .scene:has(.peak[data-route="03"]:hover,.tag[data-route="03"]:hover,.tag[data-route="03"]:focus-visible):not(:has(.tag:not([data-route="03"]):focus-visible)) .sun{left:57%;top:calc(17.28% - 90px)}
 .entry .scene:has(.peak[data-route="03"]:hover,.tag[data-route="03"]:hover,.tag[data-route="03"]:focus-visible):not(:has(.tag:not([data-route="03"]):focus-visible)) .peak[data-route="03"]{filter:brightness(1.22) saturate(1.08) drop-shadow(0 10px 18px #07102d55)}
 .entry .scene:has(.peak[data-route="03"]:hover,.tag[data-route="03"]:hover,.tag[data-route="03"]:focus-visible):not(:has(.tag:not([data-route="03"]):focus-visible)) .peak[data-route="03"]:after{opacity:.85}
 .entry .scene:has(.peak[data-route="03"]:hover,.tag[data-route="03"]:hover,.tag[data-route="03"]:focus-visible):not(:has(.tag:not([data-route="03"]):focus-visible)) .tag[data-route="03"]>span:first-child{background:#fff3dd!important;box-shadow:0 0 0 2px #ffd68b,0 10px 30px #07102d44!important}
-.entry .scene:has(.peak[data-route="04"]:hover,.tag[data-route="04"]:hover,.tag[data-route="04"]:focus-visible):not(:has(.tag:not([data-route="04"]):focus-visible)) .sun{left:86.56%;top:calc(27.48% - 90px)}
 .entry .scene:has(.peak[data-route="04"]:hover,.tag[data-route="04"]:hover,.tag[data-route="04"]:focus-visible):not(:has(.tag:not([data-route="04"]):focus-visible)) .peak[data-route="04"]{filter:brightness(1.22) saturate(1.08) drop-shadow(0 10px 18px #07102d55)}
 .entry .scene:has(.peak[data-route="04"]:hover,.tag[data-route="04"]:hover,.tag[data-route="04"]:focus-visible):not(:has(.tag:not([data-route="04"]):focus-visible)) .peak[data-route="04"]:after{opacity:.85}
 .entry .scene:has(.peak[data-route="04"]:hover,.tag[data-route="04"]:hover,.tag[data-route="04"]:focus-visible):not(:has(.tag:not([data-route="04"]):focus-visible)) .tag[data-route="04"]>span:first-child{background:#fff3dd!important;box-shadow:0 0 0 2px #ffd68b,0 10px 30px #07102d44!important}
@@ -171,8 +167,8 @@ clip: 'polygon(0 100%,12% 76%,22% 55%,28% 49%,32% 40%,37% 47%,42% 50%,49% 28%,53
 left: 39, w: 36, h: 88, sx: .5, sy: .06, z: 2, color: '#12141B', light: '#353A48',
 clip: 'polygon(0 100%,14% 73%,22% 54%,29% 35%,36% 16%,41% 11%,44% 6%,48% 7%,52% 6%,56% 6%,60% 11%,64% 16%,72% 38%,80% 58%,90% 80%,100% 100%)', shade: 'rgba(0,0,0,.35)', shadeClip: 'polygon(50% 6%, 56% 6%, 64% 14%, 100% 100%, 46% 100%)', snow: 'polygon(36% 14%, 44% 6%, 56% 6%, 64% 14%, 66% 20%, 61% 24%, 59% 36%, 55% 26%, 52% 38%, 49% 24%, 46% 34%, 43% 24%, 38% 22%, 34% 18%)', snowShade: 'polygon(50% 6%, 56% 6%, 64% 14%, 66% 20%, 61% 24%, 59% 36%, 55% 26%, 52% 38%)' },
 { num: '04', kicker: 'La cumbre de hoy', name: 'Trabajos', desc: 'Una selección de contenido y de las experiencias que me han ayudado a crearlo.', href: 'trabajos.html', accent: '#2A35D8', ring: 'rgba(255,179,138,.7)',
-left: 68, w: 32, h: 74, sx: .58, sy: .02, z: 4, color: '#0D1262', light: '#2A3AD2',
-clip: 'polygon(0 100%,10% 78%,20% 57%,27% 49%,34% 40%,40% 37%,46% 30%,51% 16%,55% 11%,58% 2%,63% 14%,68% 21%,74% 30%,80% 43%,86% 52%,92% 75%,100% 100%)', shade: 'rgba(5,7,40,.45)', shadeClip: 'polygon(58% 2%, 74% 30%, 86% 52%, 100% 100%, 50% 100%, 62% 50%)', snow: 'polygon(51% 15%, 58% 2%, 66% 17%, 62% 14%, 59% 22%, 55% 15%)', snowShade: 'polygon(58% 2%, 66% 17%, 62% 14%, 59% 22%)' }
+left: 68, w: 32, h: 74, sx: .58, sy: .02, z: 4, color: '#23354E', light: '#63829C',
+clip: 'polygon(0 100%,8% 78%,13% 72%,19% 48%,26% 33%,31% 26%,37% 30%,43% 45%,49% 18%,54% 8%,58% 2%,64% 7%,69% 17%,72% 36%,78% 23%,83% 25%,88% 44%,91% 65%,100% 100%)', shade: 'rgba(12,28,47,.50)', shadeClip: 'polygon(58% 2%,64% 7%,69% 17%,72% 36%,78% 23%,83% 25%,100% 100%,49% 100%,55% 52%,51% 23%)', snow: 'polygon(54% 8%,58% 2%,64% 7%,69% 17%,65% 15%,63% 19%,60% 12%,57% 17%,54% 13%,50% 20%)', snowShade: 'polygon(58% 2%,64% 7%,69% 17%,65% 15%,63% 19%,60% 12%,57% 17%)' }
 ];
 const peaks = P.map((p) => ({ ...p, left: p.left + '%', width: p.w + '%', height: p.h + '%',
 sx: (p.left + p.w * p.sx) + '%', sy: (100 - p.h + p.h * p.sy) + '%',
@@ -186,5 +182,6 @@ stars: [[4,8,3],[9,22,2],[15,6,2],[27,14,3],[33,4,2],[41,18,2],[72,8,2],[78,22,3
 }
 window.Component = Component;
 </script>
+<script src="landscape-light.js"></script>
 </body>
 </html>
