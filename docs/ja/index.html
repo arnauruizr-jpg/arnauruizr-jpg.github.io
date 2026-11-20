@@ -42,6 +42,30 @@ a:focus-visible{outline:3px solid #FFB38A;outline-offset:4px}
 @media(min-width:761px) and (max-height:720px){.entry .mh1{font-size:38px!important}.entry-intro section{padding-top:16px!important}.entry .scene{flex-basis:270px;min-height:270px}.entry .scene .tag>span:first-child{padding:6px 10px!important}}
 @media(max-width:760px){.entry{min-height:100svh}.entry-intro header{padding-top:14px!important}.entry-intro section{padding-top:24px!important;gap:14px!important}.entry .mh1{font-size:clamp(32px,8.5vw,44px)!important;line-height:1.03!important}.entry-intro section p{font-size:16px!important}.entry .scene{flex:1 0 230px;min-height:230px;margin-top:18px!important}.entry .mlist{display:grid!important;grid-template-columns:1fr 1fr;padding:12px 16px 60px!important;gap:8px!important;background:#10183f!important}.entry .mlist a{min-height:46px!important;padding:0 12px!important}.entry .mlist strong{font-size:16px!important}.entry-footer{display:none}.entry .scene>div:nth-child(2){width:130px!important;height:130px!important;margin-left:-65px!important;top:20px!important}}
 
+
+/* One light source follows the active summit, with a warm reflected face. */
+.entry .scene .sun{left:57%;top:40px;background:radial-gradient(circle at 37% 30%,#fff1bd 0%,#ffdf82 34%,#f6bd43 72%,#eda336 100%)!important;box-shadow:0 0 32px 14px #ffd78235,0 0 100px 52px #ffd7821f!important;transition:left 1.05s cubic-bezier(.22,.68,.18,1),top 1.05s cubic-bezier(.22,.68,.18,1);pointer-events:none}
+.entry .scene .peak{cursor:pointer;transition:filter .55s ease}
+.entry .scene .peak:after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 48% 7%,#fff0bdbb 0%,#ffd18d66 25%,#ffc27b22 58%,transparent 85%);mix-blend-mode:screen;opacity:0;transition:opacity .55s ease}
+.entry .tag>span:first-child{transition:background .35s ease,box-shadow .35s ease}
+.entry .scene:has(.peak[data-route="01"]:hover,.tag[data-route="01"]:hover,.tag[data-route="01"]:focus-visible):not(:has(.tag:not([data-route="01"]):focus-visible)) .sun{left:13.52%;top:calc(65.6% - 90px)}
+.entry .scene:has(.peak[data-route="01"]:hover,.tag[data-route="01"]:hover,.tag[data-route="01"]:focus-visible):not(:has(.tag:not([data-route="01"]):focus-visible)) .peak[data-route="01"]{filter:brightness(1.22) saturate(1.08) drop-shadow(0 10px 18px #07102d55)}
+.entry .scene:has(.peak[data-route="01"]:hover,.tag[data-route="01"]:hover,.tag[data-route="01"]:focus-visible):not(:has(.tag:not([data-route="01"]):focus-visible)) .peak[data-route="01"]:after{opacity:.85}
+.entry .scene:has(.peak[data-route="01"]:hover,.tag[data-route="01"]:hover,.tag[data-route="01"]:focus-visible):not(:has(.tag:not([data-route="01"]):focus-visible)) .tag[data-route="01"]>span:first-child{background:#fff3dd!important;box-shadow:0 0 0 2px #ffd68b,0 10px 30px #07102d44!important}
+.entry .scene:has(.peak[data-route="02"]:hover,.tag[data-route="02"]:hover,.tag[data-route="02"]:focus-visible):not(:has(.tag:not([data-route="02"]):focus-visible)) .sun{left:34.24%;top:calc(37.92% - 90px)}
+.entry .scene:has(.peak[data-route="02"]:hover,.tag[data-route="02"]:hover,.tag[data-route="02"]:focus-visible):not(:has(.tag:not([data-route="02"]):focus-visible)) .peak[data-route="02"]{filter:brightness(1.22) saturate(1.08) drop-shadow(0 10px 18px #07102d55)}
+.entry .scene:has(.peak[data-route="02"]:hover,.tag[data-route="02"]:hover,.tag[data-route="02"]:focus-visible):not(:has(.tag:not([data-route="02"]):focus-visible)) .peak[data-route="02"]:after{opacity:.85}
+.entry .scene:has(.peak[data-route="02"]:hover,.tag[data-route="02"]:hover,.tag[data-route="02"]:focus-visible):not(:has(.tag:not([data-route="02"]):focus-visible)) .tag[data-route="02"]>span:first-child{background:#fff3dd!important;box-shadow:0 0 0 2px #ffd68b,0 10px 30px #07102d44!important}
+.entry .scene:has(.peak[data-route="03"]:hover,.tag[data-route="03"]:hover,.tag[data-route="03"]:focus-visible):not(:has(.tag:not([data-route="03"]):focus-visible)) .sun{left:57%;top:calc(17.28% - 90px)}
+.entry .scene:has(.peak[data-route="03"]:hover,.tag[data-route="03"]:hover,.tag[data-route="03"]:focus-visible):not(:has(.tag:not([data-route="03"]):focus-visible)) .peak[data-route="03"]{filter:brightness(1.22) saturate(1.08) drop-shadow(0 10px 18px #07102d55)}
+.entry .scene:has(.peak[data-route="03"]:hover,.tag[data-route="03"]:hover,.tag[data-route="03"]:focus-visible):not(:has(.tag:not([data-route="03"]):focus-visible)) .peak[data-route="03"]:after{opacity:.85}
+.entry .scene:has(.peak[data-route="03"]:hover,.tag[data-route="03"]:hover,.tag[data-route="03"]:focus-visible):not(:has(.tag:not([data-route="03"]):focus-visible)) .tag[data-route="03"]>span:first-child{background:#fff3dd!important;box-shadow:0 0 0 2px #ffd68b,0 10px 30px #07102d44!important}
+.entry .scene:has(.peak[data-route="04"]:hover,.tag[data-route="04"]:hover,.tag[data-route="04"]:focus-visible):not(:has(.tag:not([data-route="04"]):focus-visible)) .sun{left:86.56%;top:calc(27.48% - 90px)}
+.entry .scene:has(.peak[data-route="04"]:hover,.tag[data-route="04"]:hover,.tag[data-route="04"]:focus-visible):not(:has(.tag:not([data-route="04"]):focus-visible)) .peak[data-route="04"]{filter:brightness(1.22) saturate(1.08) drop-shadow(0 10px 18px #07102d55)}
+.entry .scene:has(.peak[data-route="04"]:hover,.tag[data-route="04"]:hover,.tag[data-route="04"]:focus-visible):not(:has(.tag:not([data-route="04"]):focus-visible)) .peak[data-route="04"]:after{opacity:.85}
+.entry .scene:has(.peak[data-route="04"]:hover,.tag[data-route="04"]:hover,.tag[data-route="04"]:focus-visible):not(:has(.tag:not([data-route="04"]):focus-visible)) .tag[data-route="04"]>span:first-child{background:#fff3dd!important;box-shadow:0 0 0 2px #ffd68b,0 10px 30px #07102d44!important}
+@media(max-width:760px){.entry .scene .sun{left:57%!important;top:20px!important;transition:none}}
+@media(prefers-reduced-motion:reduce){.entry .scene .sun{left:57%!important;top:40px!important;transition:none}.entry .scene .peak,.entry .scene .peak:after,.entry .tag>span:first-child{transition:none}}
 </style>
 <style>
 .lang-switch{position:fixed;right:14px;bottom:14px;z-index:60;display:flex;gap:2px;padding:4px;border-radius:999px;background:rgba(255,255,255,.96);box-shadow:0 6px 20px rgba(10,14,69,.22),0 0 0 1px rgba(22,24,43,.08);font:700 13px/1 'Hanken Grotesk',system-ui,sans-serif}
@@ -80,7 +104,7 @@ html[lang=ja] h1,html[lang=ja] h2,html[lang=ja] h3{word-break:keep-all;overflow-
 
 <section aria-label="ルート：山を選んでください" class="scene" style="position: relative; height: 600px; max-width: 1440px; margin: 10px auto 0">
 <sc-for list="{{stars}}" as="st" hint-placeholder-count="14"><span aria-hidden="true" style="position: absolute; left: {{st.x}}; top: {{st.y}}; width: {{st.s}}; height: {{st.s}}; border-radius: 50%; background: #FFFFFF; opacity: {{st.o}}"></span></sc-for>
-<div aria-hidden="true" style="position: absolute; left: 57%; top: 40px; width: 200px; height: 200px; margin-left: -100px; border-radius: 50%; background: #F2C230; box-shadow: 0 0 0 34px rgba(242,194,48,.12), 0 0 0 80px rgba(242,194,48,.06), 0 0 120px 40px rgba(242,194,48,.18)"></div>
+<div class="sun" aria-hidden="true" style="position: absolute; width: 200px; height: 200px; margin-left: -100px; border-radius: 50%; background: #F2C230; box-shadow: 0 0 0 34px rgba(242,194,48,.12), 0 0 0 80px rgba(242,194,48,.06), 0 0 120px 40px rgba(242,194,48,.18)"></div>
 <div aria-hidden="true" style="position: absolute; left: 0; right: 0; bottom: 0; height: 66%; background: linear-gradient(#5562EC, #4652E6); clip-path: polygon(0 100%, 0 40%, 5% 30%, 9% 36%, 14% 20%, 19% 32%, 25% 16%, 31% 30%, 36% 24%, 42% 38%, 48% 18%, 53% 30%, 60% 22%, 67% 36%, 74% 14%, 80% 28%, 86% 20%, 92% 34%, 100% 24%, 100% 100%)"></div>
 <div aria-hidden="true" class="drift" style="position: absolute; left: -5%; right: -5%; bottom: 30%; height: 70px; background: rgba(255,255,255,.10); filter: blur(18px); border-radius: 50%"></div>
 <div aria-hidden="true" style="position: absolute; left: 0; right: 0; bottom: 0; height: 48%; background: linear-gradient(#3E4ADB, #3440CC); clip-path: polygon(0 100%, 0 46%, 7% 34%, 13% 44%, 20% 28%, 28% 42%, 37% 30%, 45% 50%, 54% 32%, 62% 44%, 71% 36%, 80% 50%, 88% 30%, 95% 40%, 100% 34%, 100% 100%)"></div>
@@ -90,7 +114,7 @@ html[lang=ja] h1,html[lang=ja] h2,html[lang=ja] h3{word-break:keep-all;overflow-
 </svg>
 
 <sc-for list="{{peaks}}" as="p" hint-placeholder-count="4">
-<a class="peak" href="{{p.href}}" tabindex="-1" aria-hidden="true" style="position: absolute; left: {{p.left}}; bottom: 0; width: {{p.width}}; height: {{p.height}}; clip-path: {{p.clip}}; z-index: {{p.z}}; display: block; --rock-light:{{p.light}}; --rock-dark:{{p.color}}">
+<a class="peak" data-route="{{p.num}}" href="{{p.href}}" tabindex="-1" aria-hidden="true" style="position: absolute; left: {{p.left}}; bottom: 0; width: {{p.width}}; height: {{p.height}}; clip-path: {{p.clip}}; z-index: {{p.z}}; display: block; --rock-light:{{p.light}}; --rock-dark:{{p.color}}">
 <span style="position: absolute; inset: 0; background: linear-gradient({{p.light}}, {{p.color}})"></span>
 <span style="position: absolute; inset: 0; background: {{p.shade}}; clip-path: {{p.shadeClip}}"></span>
 <svg class="rock-detail" aria-hidden="true" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M52 9 47 29 51 40 40 60 43 73 30 100M55 19 60 34 55 48 68 71 77 100M45 33 35 53 38 60 22 86M61 44 71 57 69 64 87 94" fill="none" stroke="#b6c5ea" stroke-width=".45"/><path d="m49 24-2 5 4 11-11 20 3 13-13 27h8l10-32-1-13 9-15-5-14zM58 30l2 4-5 14 13 23 9 29h9L72 65l-9-18z" fill="#d3dff2" opacity=".28"/></svg>
@@ -103,7 +127,7 @@ html[lang=ja] h1,html[lang=ja] h2,html[lang=ja] h3{word-break:keep-all;overflow-
 <div aria-hidden="true" class="drift" style="position: absolute; left: 10%; width: 50%; bottom: 10%; height: 40px; z-index: 6; background: rgba(255,255,255,.08); filter: blur(14px); border-radius: 50%"></div>
 
 <sc-for list="{{peaks}}" as="p" hint-placeholder-count="4">
-<a class="tag" href="{{p.href}}" aria-label="{{p.aria}}" style="position: absolute; left: {{p.sx}}; top: {{p.sy}}; transform: translate(-50%, -100%); z-index: 8; display: flex; flex-direction: column; align-items: center; text-decoration: none; color: #17171C">
+<a class="tag" data-route="{{p.num}}" href="{{p.href}}" aria-label="{{p.aria}}" style="position: absolute; left: {{p.sx}}; top: {{p.sy}}; transform: translate(-50%, -100%); z-index: 8; display: flex; flex-direction: column; align-items: center; text-decoration: none; color: #17171C">
 <span style="display: flex; flex-direction: column; align-items: flex-start; min-width: 150px; padding: 10px 14px; border-radius: 12px; background: rgba(255,255,255,.96); box-shadow: 0 12px 30px rgba(10,14,69,.35)">
 <span style="font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: {{p.accent}}">{{p.num}} · {{p.kicker}}</span>
 <span style="margin-top: 2px; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 19px; white-space: nowrap">{{p.name}}</span>
