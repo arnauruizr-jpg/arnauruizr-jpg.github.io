@@ -24,6 +24,24 @@ a{color:#FFFFFF}
 a:focus-visible{outline:3px solid #FFB38A;outline-offset:4px}
 @media (max-width: 760px){.tag{display:none!important}.mlist{display:flex}.scene{height:340px!important;margin-top:24px!important}.mwrap{padding:0 20px!important}.mh1{font-size:44px!important}.mh1 .pill{white-space:normal!important}.mtag{display:none}.mnav a{padding:0 12px!important}}
 @media (prefers-reduced-motion: reduce){.peak,.tag,.tag .more{transition:none}.drift{animation:none}.tag:hover,.tag:focus-visible{transform:translate(-50%,-100%)}}
+
+/* Landscape fits the entry viewport; keep the complete silhouette in view. */
+.entry{min-height:100svh;display:flex;flex-direction:column;background:radial-gradient(ellipse at 58% 48%,#4b5bdc 0%,#2736ad 46%,#192879 100%)!important}
+.entry-intro{flex:none;width:100%}
+.entry-intro header{padding-top:18px!important}
+.entry-intro section{padding-top:24px!important;gap:18px!important}
+.entry .mh1{font-size:clamp(38px,4.6vw,66px)!important;max-width:900px}
+.entry .scene{flex:1 0 310px;min-height:310px;height:auto!important;max-width:none!important;width:100%;margin-top:24px!important;isolation:isolate}
+.entry .scene .peak{filter:drop-shadow(0 10px 18px #07102d55)}
+.entry .peak>span:first-child{background-image:linear-gradient(125deg,#ffffff0d,transparent 40%,#05091f55),linear-gradient(180deg,var(--rock-light),var(--rock-dark))!important}
+.rock-detail{position:absolute;inset:0;width:100%;height:100%;opacity:.24;mix-blend-mode:screen;pointer-events:none}
+.entry .scene:after{content:"";position:absolute;inset:70% 0 0;z-index:6;background:linear-gradient(transparent,#101b4c44);pointer-events:none}
+.entry .tag>span:first-child{min-width:132px!important;padding:8px 12px!important;box-shadow:0 8px 24px #050b2933!important}
+.entry .tag .more{display:none!important}
+.entry-footer{flex:none}
+@media(min-width:761px) and (max-height:720px){.entry .mh1{font-size:38px!important}.entry-intro section{padding-top:16px!important}.entry .scene{flex-basis:270px;min-height:270px}.entry .scene .tag>span:first-child{padding:6px 10px!important}}
+@media(max-width:760px){.entry{min-height:100svh}.entry-intro header{padding-top:14px!important}.entry-intro section{padding-top:24px!important;gap:14px!important}.entry .mh1{font-size:clamp(32px,8.5vw,44px)!important;line-height:1.03!important}.entry-intro section p{font-size:16px!important}.entry .scene{flex:1 0 230px;min-height:230px;margin-top:18px!important}.entry .mlist{display:grid!important;grid-template-columns:1fr 1fr;padding:12px 16px 60px!important;gap:8px!important;background:#10183f!important}.entry .mlist a{min-height:46px!important;padding:0 12px!important}.entry .mlist strong{font-size:16px!important}.entry-footer{display:none}.entry .scene>div:nth-child(2){width:130px!important;height:130px!important;margin-left:-65px!important;top:20px!important}}
+
 </style>
 <style>
 .lang-switch{position:fixed;right:14px;bottom:14px;z-index:60;display:flex;gap:2px;padding:4px;border-radius:999px;background:rgba(255,255,255,.96);box-shadow:0 6px 20px rgba(10,14,69,.22),0 0 0 1px rgba(22,24,43,.08);font:700 13px/1 'Hanken Grotesk',system-ui,sans-serif}
@@ -40,9 +58,9 @@ html[lang=ja] h1,html[lang=ja] h2,html[lang=ja] h3{word-break:keep-all;overflow-
 <nav class="lang-switch" aria-label="Idioma · Language · 言語"><a href="index.html" hreflang="es" lang="es" aria-current="page">ES</a><a href="en/index.html" hreflang="en" lang="en">EN</a><a href="ja/index.html" hreflang="ja" lang="ja">日本語</a></nav>
 <template id="dc-tpl">
 
-<div style="background: {{cobalt}}; color: #FFFFFF; font-family: 'Hanken Grotesk', system-ui, sans-serif; width: 100%; overflow: hidden">
+<div class="entry" style="background: {{cobalt}}; color: #FFFFFF; font-family: 'Hanken Grotesk', system-ui, sans-serif; width: 100%; overflow: hidden">
 
-<div class="mwrap" style="max-width: 1280px; margin: 0 auto; padding: 0 48px; box-sizing: border-box">
+<div class="mwrap entry-intro" style="max-width: 1280px; margin: 0 auto; padding: 0 48px; box-sizing: border-box">
 <header style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 22px 0 0; flex-wrap: wrap">
 <a href="index.html" aria-label="Arnau Ruiz Roca, inicio" style="display: inline-flex; align-items: center; gap: 12px; min-height: 44px; color: #FFFFFF; text-decoration: none">
 <svg width="46" height="26" viewBox="0 0 46 26" aria-hidden="true"><polyline points="1,24 12,10 18,16 28,3 37,13 45,24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="28" cy="3" r="2.6" fill="{{apricot}}"></circle></svg>
@@ -72,9 +90,10 @@ html[lang=ja] h1,html[lang=ja] h2,html[lang=ja] h3{word-break:keep-all;overflow-
 </svg>
 
 <sc-for list="{{peaks}}" as="p" hint-placeholder-count="4">
-<a class="peak" href="{{p.href}}" tabindex="-1" aria-hidden="true" style="position: absolute; left: {{p.left}}; bottom: 0; width: {{p.width}}; height: {{p.height}}; clip-path: {{p.clip}}; z-index: {{p.z}}; display: block">
+<a class="peak" href="{{p.href}}" tabindex="-1" aria-hidden="true" style="position: absolute; left: {{p.left}}; bottom: 0; width: {{p.width}}; height: {{p.height}}; clip-path: {{p.clip}}; z-index: {{p.z}}; display: block; --rock-light:{{p.light}}; --rock-dark:{{p.color}}">
 <span style="position: absolute; inset: 0; background: linear-gradient({{p.light}}, {{p.color}})"></span>
 <span style="position: absolute; inset: 0; background: {{p.shade}}; clip-path: {{p.shadeClip}}"></span>
+<svg class="rock-detail" aria-hidden="true" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M52 9 47 29 51 40 40 60 43 73 30 100M55 19 60 34 55 48 68 71 77 100M45 33 35 53 38 60 22 86M61 44 71 57 69 64 87 94" fill="none" stroke="#b6c5ea" stroke-width=".45"/><path d="m49 24-2 5 4 11-11 20 3 13-13 27h8l10-32-1-13 9-15-5-14zM58 30l2 4-5 14 13 23 9 29h9L72 65l-9-18z" fill="#d3dff2" opacity=".28"/></svg>
 <span style="position: absolute; inset: 0; background: linear-gradient(#FFFFFF, #E4E8FF); clip-path: {{p.snow}}"></span>
 <span style="position: absolute; inset: 0; background: #B9C1EE; clip-path: {{p.snowShade}}"></span>
 </a>
@@ -102,7 +121,7 @@ html[lang=ja] h1,html[lang=ja] h2,html[lang=ja] h3{word-break:keep-all;overflow-
 </sc-for>
 </nav>
 
-<div style="background: #0A0E45">
+<div class="entry-footer" style="background: #0A0E45">
 <div class="mwrap" style="max-width: 1280px; margin: 0 auto; padding: 14px 48px 22px; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 14px; justify-content: space-between; align-items: center; font-size: 14px; color: rgba(255,255,255,.75)">
 <span>¿Prefieres ir al grano? <a href="trabajos.html" style="color: {{apricot}}; font-weight: 700">Ver trabajos directamente →</a></span>
 <span style="color: rgba(255,255,255,.55)">Arnau Ruiz Roca · Portfolio</span>
@@ -123,13 +142,13 @@ left: 0, w: 26, h: 40, sx: .52, sy: .14, z: 4, color: '#B9684A', light: '#F1AA86
 clip: 'polygon(0 100%, 18% 60%, 34% 40%, 46% 22%, 52% 14%, 60% 24%, 72% 40%, 86% 62%, 100% 100%)', shade: 'rgba(110,50,30,.35)', shadeClip: 'polygon(52% 14%, 60% 24%, 72% 40%, 86% 62%, 100% 100%, 50% 100%, 56% 60%)', snow: none, snowShade: none },
 { num: '02', kicker: 'Fuera del trabajo', name: 'Aficiones', desc: 'Fútbol, montaña y jiu-jitsu. Un poco de mi vida fuera del trabajo.', href: 'aficiones.html', accent: '#2A35D8', ring: 'rgba(255,255,255,.5)',
 left: 18, w: 28, h: 64, sx: .58, sy: .03, z: 3, color: '#151C78', light: '#3747C8',
-clip: 'polygon(0 100%, 22% 52%, 32% 40%, 42% 50%, 58% 3%, 70% 26%, 82% 46%, 100% 100%)', shade: 'rgba(8,10,50,.45)', shadeClip: 'polygon(58% 3%, 70% 26%, 82% 46%, 100% 100%, 52% 100%, 60% 44%)', snow: 'polygon(50% 16%, 58% 3%, 66% 18%, 62% 16%, 58% 24%, 54% 17%)', snowShade: 'polygon(58% 3%, 66% 18%, 62% 16%, 58% 24%)' },
+clip: 'polygon(0 100%,12% 76%,22% 55%,28% 49%,32% 40%,37% 47%,42% 50%,49% 28%,53% 23%,58% 3%,62% 14%,66% 19%,70% 26%,75% 38%,82% 46%,87% 63%,93% 77%,100% 100%)', shade: 'rgba(8,10,50,.45)', shadeClip: 'polygon(58% 3%, 70% 26%, 82% 46%, 100% 100%, 52% 100%, 60% 44%)', snow: 'polygon(50% 16%, 58% 3%, 66% 18%, 62% 16%, 58% 24%, 54% 17%)', snowShade: 'polygon(58% 3%, 66% 18%, 62% 16%, 58% 24%)' },
 { num: '03', kicker: 'El Fuji · 富士山', name: 'Japón', desc: 'Aprender un idioma, trabajar y encontrar mi sitio en otra cultura.', href: 'japon.html', accent: '#9A7400', ring: 'rgba(242,194,48,.6)',
 left: 39, w: 36, h: 88, sx: .5, sy: .06, z: 2, color: '#12141B', light: '#353A48',
-clip: 'polygon(0 100%, 36% 14%, 44% 6%, 56% 6%, 64% 14%, 100% 100%)', shade: 'rgba(0,0,0,.35)', shadeClip: 'polygon(50% 6%, 56% 6%, 64% 14%, 100% 100%, 46% 100%)', snow: 'polygon(36% 14%, 44% 6%, 56% 6%, 64% 14%, 66% 20%, 61% 24%, 59% 36%, 55% 26%, 52% 38%, 49% 24%, 46% 34%, 43% 24%, 38% 22%, 34% 18%)', snowShade: 'polygon(50% 6%, 56% 6%, 64% 14%, 66% 20%, 61% 24%, 59% 36%, 55% 26%, 52% 38%)' },
+clip: 'polygon(0 100%,14% 73%,22% 54%,29% 35%,36% 16%,41% 11%,44% 6%,48% 7%,52% 6%,56% 6%,60% 11%,64% 16%,72% 38%,80% 58%,90% 80%,100% 100%)', shade: 'rgba(0,0,0,.35)', shadeClip: 'polygon(50% 6%, 56% 6%, 64% 14%, 100% 100%, 46% 100%)', snow: 'polygon(36% 14%, 44% 6%, 56% 6%, 64% 14%, 66% 20%, 61% 24%, 59% 36%, 55% 26%, 52% 38%, 49% 24%, 46% 34%, 43% 24%, 38% 22%, 34% 18%)', snowShade: 'polygon(50% 6%, 56% 6%, 64% 14%, 66% 20%, 61% 24%, 59% 36%, 55% 26%, 52% 38%)' },
 { num: '04', kicker: 'La cumbre de hoy', name: 'Trabajos', desc: 'Una selección de contenido y de las experiencias que me han ayudado a crearlo.', href: 'trabajos.html', accent: '#2A35D8', ring: 'rgba(255,179,138,.7)',
 left: 68, w: 32, h: 74, sx: .58, sy: .02, z: 4, color: '#0D1262', light: '#2A3AD2',
-clip: 'polygon(0 100%, 20% 56%, 34% 40%, 46% 30%, 58% 2%, 74% 30%, 86% 52%, 100% 100%)', shade: 'rgba(5,7,40,.45)', shadeClip: 'polygon(58% 2%, 74% 30%, 86% 52%, 100% 100%, 50% 100%, 62% 50%)', snow: 'polygon(51% 15%, 58% 2%, 66% 17%, 62% 14%, 59% 22%, 55% 15%)', snowShade: 'polygon(58% 2%, 66% 17%, 62% 14%, 59% 22%)' }
+clip: 'polygon(0 100%,10% 78%,20% 57%,27% 49%,34% 40%,40% 37%,46% 30%,51% 16%,55% 11%,58% 2%,63% 14%,68% 21%,74% 30%,80% 43%,86% 52%,92% 75%,100% 100%)', shade: 'rgba(5,7,40,.45)', shadeClip: 'polygon(58% 2%, 74% 30%, 86% 52%, 100% 100%, 50% 100%, 62% 50%)', snow: 'polygon(51% 15%, 58% 2%, 66% 17%, 62% 14%, 59% 22%, 55% 15%)', snowShade: 'polygon(58% 2%, 66% 17%, 62% 14%, 59% 22%)' }
 ];
 const peaks = P.map((p) => ({ ...p, left: p.left + '%', width: p.w + '%', height: p.h + '%',
 sx: (p.left + p.w * p.sx) + '%', sy: (100 - p.h + p.h * p.sy) + '%',
