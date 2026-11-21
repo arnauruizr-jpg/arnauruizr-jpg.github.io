@@ -1,221 +1,57 @@
 <!doctype html>
-<html lang="ja">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>アルナウ・ルイス・ロカ | マーケティング・コンテンツ・コミュニティ</title>
-<meta name="description" content="アルナウ・ルイス・ロカのポートフォリオ：マーケティング、コンテンツ、SNS。">
-<link rel="alternate" hreflang="es" href="../index.html">
-<link rel="alternate" hreflang="en" href="../en/index.html">
-<link rel="alternate" hreflang="ja" href="../ja/index.html">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&amp;family=Hanken+Grotesk:wght@400..700&amp;display=swap">
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Arnau Ruiz Roca | ポートフォリオ</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap">
 <style>
-body{margin:0}
-a{color:#FFFFFF}
-.peak{transition:filter .4s}
-.peak:hover{filter:brightness(1.18) saturate(1.05)}
-.tag{transition:transform .35s cubic-bezier(.22,1,.36,1),background .3s}
-.tag:hover,.tag:focus-visible{transform:translate(-50%,-100%) translateY(-6px)}
-.tag .more{max-height:0;overflow:hidden;opacity:0;transition:max-height .35s,opacity .3s}
-.tag:hover .more,.tag:focus-visible .more{max-height:60px;opacity:1}
-.drift{animation:drift 14s ease-in-out 2 alternate}
-@keyframes drift{from{transform:translateX(0)}to{transform:translateX(40px)}}
-.mlist{display:none}
-a:focus-visible{outline:3px solid #FFB38A;outline-offset:4px}
-@media (max-width: 760px){.tag{display:none!important}.mlist{display:flex}.scene{height:340px!important;margin-top:24px!important}.mwrap{padding:0 20px!important}.mh1{font-size:44px!important}.mh1 .pill{white-space:normal!important}.mtag{display:none}.mnav a{padding:0 12px!important}}
-@media (prefers-reduced-motion: reduce){.peak,.tag,.tag .more{transition:none}.drift{animation:none}.tag:hover,.tag:focus-visible{transform:translate(-50%,-100%)}}
-
-/* Landscape fits the entry viewport; keep the complete silhouette in view. */
-.entry{min-height:100svh;display:flex;flex-direction:column;background:radial-gradient(ellipse at 58% 48%,#4b5bdc 0%,#2736ad 46%,#192879 100%)!important}
-.entry-intro{flex:none;width:100%}
-.entry-intro header{padding-top:18px!important}
-.entry-intro section{padding-top:24px!important;gap:18px!important}
-.entry .mh1{font-size:clamp(38px,4.6vw,66px)!important;max-width:900px}
-.entry .scene{flex:1 0 310px;min-height:310px;height:auto!important;max-width:none!important;width:100%;margin-top:24px!important;isolation:isolate}
-.entry .scene .peak{filter:drop-shadow(0 10px 18px #07102d55)}
-.entry .peak>span:first-child{background-image:linear-gradient(125deg,#ffffff0d,transparent 40%,#05091f55),linear-gradient(180deg,var(--rock-light),var(--rock-dark))!important}
-.rock-detail{position:absolute;inset:0;width:100%;height:100%;opacity:.24;mix-blend-mode:screen;pointer-events:none}
-.entry .scene:after{content:"";position:absolute;inset:70% 0 0;z-index:6;background:linear-gradient(transparent,#101b4c44);pointer-events:none}
-.entry .tag>span:first-child{min-width:132px!important;padding:8px 12px!important;box-shadow:0 8px 24px #050b2933!important}
-.entry .tag .more{display:none!important}
-.entry-footer{flex:none}
-@media(min-width:761px) and (max-height:720px){.entry .mh1{font-size:38px!important}.entry-intro section{padding-top:16px!important}.entry .scene{flex-basis:270px;min-height:270px}.entry .scene .tag>span:first-child{padding:6px 10px!important}}
-@media(max-width:760px){.entry{min-height:100svh}.entry-intro header{padding-top:14px!important}.entry-intro section{padding-top:24px!important;gap:14px!important}.entry .mh1{font-size:clamp(32px,8.5vw,44px)!important;line-height:1.03!important}.entry-intro section p{font-size:16px!important}.entry .scene{flex:1 0 230px;min-height:230px;margin-top:18px!important}.entry .mlist{display:grid!important;grid-template-columns:1fr 1fr;padding:12px 16px 60px!important;gap:8px!important;background:#10183f!important}.entry .mlist a{min-height:46px!important;padding:0 12px!important}.entry .mlist strong{font-size:16px!important}.entry-footer{display:none}.entry .scene>div:nth-child(2){width:130px!important;height:130px!important;margin-left:-65px!important;top:20px!important}}
-
-
-/* One light source follows the active summit, with a warm reflected face. */
-.entry .scene .sun{left:57%;top:40px;background:radial-gradient(circle at 37% 30%,#fff1bd 0%,#ffdf82 34%,#f6bd43 72%,#eda336 100%)!important;box-shadow:0 0 32px 14px #ffd78235,0 0 100px 52px #ffd7821f!important;transition:none;will-change:transform;pointer-events:none}
-.entry .scene .peak{cursor:pointer;transition:filter .55s ease}
-.entry .scene .peak:after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 48% 7%,#fff0bdbb 0%,#ffd18d66 25%,#ffc27b22 58%,transparent 85%);mix-blend-mode:screen;opacity:0;transition:opacity .55s ease}
-.entry .tag>span:first-child{transition:background .35s ease,box-shadow .35s ease}
-.entry .scene:has(.peak[data-route="01"]:hover,.tag[data-route="01"]:hover,.tag[data-route="01"]:focus-visible):not(:has(.tag:not([data-route="01"]):focus-visible)) .peak[data-route="01"]{filter:brightness(1.22) saturate(1.08) drop-shadow(0 10px 18px #07102d55)}
-.entry .scene:has(.peak[data-route="01"]:hover,.tag[data-route="01"]:hover,.tag[data-route="01"]:focus-visible):not(:has(.tag:not([data-route="01"]):focus-visible)) .peak[data-route="01"]:after{opacity:.85}
-.entry .scene:has(.peak[data-route="01"]:hover,.tag[data-route="01"]:hover,.tag[data-route="01"]:focus-visible):not(:has(.tag:not([data-route="01"]):focus-visible)) .tag[data-route="01"]>span:first-child{background:#fff3dd!important;box-shadow:0 0 0 2px #ffd68b,0 10px 30px #07102d44!important}
-.entry .scene:has(.peak[data-route="02"]:hover,.tag[data-route="02"]:hover,.tag[data-route="02"]:focus-visible):not(:has(.tag:not([data-route="02"]):focus-visible)) .peak[data-route="02"]{filter:brightness(1.22) saturate(1.08) drop-shadow(0 10px 18px #07102d55)}
-.entry .scene:has(.peak[data-route="02"]:hover,.tag[data-route="02"]:hover,.tag[data-route="02"]:focus-visible):not(:has(.tag:not([data-route="02"]):focus-visible)) .peak[data-route="02"]:after{opacity:.85}
-.entry .scene:has(.peak[data-route="02"]:hover,.tag[data-route="02"]:hover,.tag[data-route="02"]:focus-visible):not(:has(.tag:not([data-route="02"]):focus-visible)) .tag[data-route="02"]>span:first-child{background:#fff3dd!important;box-shadow:0 0 0 2px #ffd68b,0 10px 30px #07102d44!important}
-.entry .scene:has(.peak[data-route="03"]:hover,.tag[data-route="03"]:hover,.tag[data-route="03"]:focus-visible):not(:has(.tag:not([data-route="03"]):focus-visible)) .peak[data-route="03"]{filter:brightness(1.22) saturate(1.08) drop-shadow(0 10px 18px #07102d55)}
-.entry .scene:has(.peak[data-route="03"]:hover,.tag[data-route="03"]:hover,.tag[data-route="03"]:focus-visible):not(:has(.tag:not([data-route="03"]):focus-visible)) .peak[data-route="03"]:after{opacity:.85}
-.entry .scene:has(.peak[data-route="03"]:hover,.tag[data-route="03"]:hover,.tag[data-route="03"]:focus-visible):not(:has(.tag:not([data-route="03"]):focus-visible)) .tag[data-route="03"]>span:first-child{background:#fff3dd!important;box-shadow:0 0 0 2px #ffd68b,0 10px 30px #07102d44!important}
-.entry .scene:has(.peak[data-route="04"]:hover,.tag[data-route="04"]:hover,.tag[data-route="04"]:focus-visible):not(:has(.tag:not([data-route="04"]):focus-visible)) .peak[data-route="04"]{filter:brightness(1.22) saturate(1.08) drop-shadow(0 10px 18px #07102d55)}
-.entry .scene:has(.peak[data-route="04"]:hover,.tag[data-route="04"]:hover,.tag[data-route="04"]:focus-visible):not(:has(.tag:not([data-route="04"]):focus-visible)) .peak[data-route="04"]:after{opacity:.85}
-.entry .scene:has(.peak[data-route="04"]:hover,.tag[data-route="04"]:hover,.tag[data-route="04"]:focus-visible):not(:has(.tag:not([data-route="04"]):focus-visible)) .tag[data-route="04"]>span:first-child{background:#fff3dd!important;box-shadow:0 0 0 2px #ffd68b,0 10px 30px #07102d44!important}
-@media(max-width:760px){.entry .scene .sun{left:57%!important;top:20px!important;transition:none}}
-@media(prefers-reduced-motion:reduce){.entry .scene .sun{left:57%!important;top:40px!important;transition:none}.entry .scene .peak,.entry .scene .peak:after,.entry .tag>span:first-child{transition:none}}
-</style>
-<style>
-.lang-switch{position:fixed;right:14px;bottom:14px;z-index:60;display:flex;gap:2px;padding:4px;border-radius:999px;background:rgba(255,255,255,.96);box-shadow:0 6px 20px rgba(10,14,69,.22),0 0 0 1px rgba(22,24,43,.08);font:700 13px/1 'Hanken Grotesk',system-ui,sans-serif}
-.lang-switch a{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:40px;padding:0 10px;border-radius:999px;color:#16182B;text-decoration:none}
-.lang-switch a[aria-current]{background:#2A35D8;color:#fff}
-.lang-switch a:focus-visible{outline:3px solid #FF8F5E;outline-offset:2px}
-html[lang=ja] body{line-break:strict;overflow-wrap:anywhere}
-html[lang=ja] .stop .sh{display:none!important}
-html[lang=ja] h1,html[lang=ja] h2,html[lang=ja] h3{word-break:keep-all;overflow-wrap:anywhere}
-</style>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&amp;display=swap">
-<style>
-/* Portfolio landscape composition. */
-.entry{min-height:100svh;background:radial-gradient(ellipse at 66% 40%,#4559c5 0%,#25378e 52%,#14225f 100%)!important}
-.entry .entry-intro{max-width:none!important;padding:0 5vw!important}
-.entry .entry-intro header{padding-top:20px!important}
-.entry .scene{flex:1 0 530px;min-height:530px;margin-top:0!important;isolation:isolate}
-.portfolio-title{position:absolute;z-index:2;left:3%;top:7px;width:94%;height:28vw;max-height:410px;margin:0;pointer-events:none}
-.portfolio-title svg{display:block;width:100%;height:100%;overflow:visible}
-.portfolio-title text{font-family:'Anton',Impact,sans-serif;font-weight:400;font-size:350px;fill:#fff4df;letter-spacing:-3px}
-.portfolio-subtitle{position:absolute;z-index:7;left:6%;top:45%;margin:0;font-family:'Hanken Grotesk',sans-serif;font-size:clamp(22px,2.1vw,32px);line-height:1.12;font-weight:500;letter-spacing:-.025em;color:#fff4df}
-.entry .scene .sun{left:79%!important;top:26%!important;width:180px!important;height:180px!important;margin-left:-90px!important;transform:none!important}
-.entry .scene .tag>span:first-child{min-width:128px!important;padding:8px 12px!important;border-radius:10px!important}
-.entry .scene .tag>span:first-child>span:first-child{font-size:10px!important;letter-spacing:.09em!important}
-.entry .scene .tag>span:first-child>span:nth-child(2){font-size:18px!important}
-.entry .scene .tag[data-route="01"]{top:73%!important}
-.entry .scene .tag[data-route="02"]{top:64%!important}
-.entry .scene .tag[data-route="03"]{top:56%!important}
-.entry .scene .tag[data-route="04"]{top:63%!important}
-.entry-footer{background:#0A0E45!important}
-.entry-footer>.mwrap{max-width:none!important;padding:15px 5vw 22px!important}
-.drift{animation:none!important}
-@media(min-width:761px) and (max-height:760px){.entry .scene{min-height:460px;flex-basis:460px}.portfolio-title{height:26vw;max-height:320px}.portfolio-subtitle{top:43%;font-size:24px}}
-@media(max-width:760px){.entry .entry-intro{padding:0 20px!important}.entry .entry-intro header{padding-top:14px!important}.entry .scene{flex:1 0 480px;min-height:480px;margin-top:0!important}.portfolio-title{left:3%;width:94%;top:28px;height:29vw;max-height:none}.portfolio-subtitle{left:6%;top:32%;font-size:22px;line-height:1.1}.entry .scene .sun{left:78%!important;top:30%!important;width:118px!important;height:118px!important;margin-left:-59px!important}.entry .mlist{padding-bottom:62px!important}.entry .scene .peak{height:var(--mobile-height)!important}.entry .scene .peak[data-route="01"]{--mobile-height:42%}.entry .scene .peak[data-route="02"]{--mobile-height:57%}.entry .scene .peak[data-route="03"]{--mobile-height:72%}.entry .scene .peak[data-route="04"]{--mobile-height:62%}}
-</style>
-<style>
-/* Sunlight and a moving color wash on the letters. */
-.portfolio-title .title-lit{fill:url(#letter-warmth)!important}
-.entry .scene .sun{--sun-size:164px;left:0!important;top:0!important;z-index:1!important;width:var(--sun-size)!important;height:var(--sun-size)!important;margin:0!important;transform:translate3d(var(--sun-x,50vw),var(--sun-y,250px),0)!important;background:radial-gradient(circle at 36% 28%,#fff2bc 0%,#ffdb78 38%,#f5b53d 77%,#e98c2c 100%)!important;box-shadow:0 0 20px 7px #ffd48288,0 0 65px 30px #ffb24c55,0 0 125px 75px #ffb24c1a!important;pointer-events:none}
-.entry .scene .tag{z-index:12!important}
-@media(max-width:760px){.entry .scene .sun{--sun-size:78px}.entry .scene .peak[data-route="03"]{--mobile-height:82%}.portfolio-title{top:42px}}
-</style>
-<style>
-.entry .scene .peak[data-route="01"],.entry .scene .peak[data-route="04"]{z-index:5!important}
-.entry .scene .peak[data-route="02"]{z-index:4!important}
-.entry .scene .peak[data-route="03"]{z-index:3!important}
+*{box-sizing:border-box}html,body{margin:0;background:#050505;color:#f3eee4;font-family:'Hanken Grotesk',sans-serif}a{color:inherit}a:focus-visible{outline:2px solid #edbc7d;outline-offset:5px}.page{min-height:100svh;display:flex;flex-direction:column;overflow:hidden;position:relative;isolation:isolate;background:radial-gradient(ellipse at 59% 40%,#1c1a17 0%,#090909 46%,#030303 100%)}.distant{position:absolute;z-index:-1;inset:-10% -10% 0;pointer-events:none;overflow:hidden}.distant img{position:absolute;left:-7%;top:-13%;width:118%;height:auto;filter:blur(18px) brightness(.48) saturate(.45);opacity:.58;transform:scaleX(-1)}.distant:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#03030388,transparent 34%,#03030322 65%,#030303 100%)}.masthead{position:relative;z-index:8;display:flex;align-items:center;padding:25px 5.2vw 13px;min-height:94px}.identity{display:inline-flex;align-items:center;gap:13px;text-decoration:none}.identity img{width:52px;height:52px;object-fit:cover;object-position:50% 28%;border-radius:50%;border:1px solid #ffffff22}.identity span{font:400 22px/1.03 'Anton',Impact,sans-serif;letter-spacing:.005em}.identity span small{display:block;font:500 10px/1.4 'Hanken Grotesk',sans-serif;color:#a29c93;letter-spacing:.09em;margin-top:5px;text-transform:uppercase}.landscape{position:relative;flex:1 0 630px;min-height:630px;isolation:isolate}.portfolio{position:absolute;left:3.8%;top:-2px;width:92.4%;height:27vw;max-height:410px;margin:0;z-index:2;pointer-events:none}.portfolio svg{display:block;width:100%;height:100%;overflow:visible}.portfolio text{font:400 350px 'Anton',Impact,sans-serif;fill:#f5f0e6;letter-spacing:-3px}.sun{position:absolute;z-index:1;left:60%;top:20.5%;width:124px;height:124px;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle at 36% 28%,#fff1bf,#ebba6d 57%,#ca803b);box-shadow:0 0 55px 24px #d9a86333,0 0 110px 60px #ad723015;pointer-events:none}.foreground{position:absolute;z-index:3;bottom:-1px;left:0;width:100%;height:auto;display:block;pointer-events:none;filter:brightness(.91) contrast(1.04)}.ground-fade{position:absolute;z-index:4;inset:77% 0 -2px;background:linear-gradient(transparent,#050505 93%);pointer-events:none}.trail{position:absolute;z-index:5;inset:0;width:100%;height:100%;pointer-events:none;opacity:.27}.trail path{fill:none;stroke:#e7d1ad;stroke-width:1;stroke-dasharray:2 8;vector-effect:non-scaling-stroke}.stop{position:absolute;z-index:6;transform:translate(-50%,-50%);min-width:150px;text-align:center;text-decoration:none;padding:10px 12px 12px;background:linear-gradient(180deg,#05050500,#05050580);border-radius:8px;text-shadow:0 2px 10px #000b;transition:color .2s,transform .2s}.stop:before{content:"";display:block;width:5px;height:5px;margin:0 auto 12px;background:#eacb97;box-shadow:0 0 12px #edc78b;border-radius:50%}.stop small{display:block;font-size:10px;line-height:1.4;letter-spacing:.15em;text-transform:uppercase;color:#d8cbb8}.stop strong{display:block;font-size:19px;font-weight:600;line-height:1.4;letter-spacing:-.02em}.stop:hover{color:#ffd592;transform:translate(-50%,-54%)}.stop-1{left:13.5%;top:67%}.stop-2{left:35%;top:65%}.stop-3{left:60%;top:57%}.stop-4{left:86%;top:61%}.foot{position:relative;z-index:8;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 5.2vw 22px;background:#050505;font-size:12px;color:#a5a19a}.foot p{margin:0;line-height:1.5}.foot p a{color:#e4dfd7;text-underline-offset:4px;margin-left:4px}.languages{display:flex;gap:16px;align-items:center;font-size:11px}.languages a{text-decoration:none;color:#77766f}.languages a[aria-current]{color:#f2e9d9}.mobile-routes{display:none}
+@media(min-width:761px) and (max-height:780px){.masthead{min-height:78px;padding-top:16px;padding-bottom:10px}.identity img{width:44px;height:44px}.identity span{font-size:19px}.landscape{min-height:520px;flex-basis:520px}.portfolio{height:25vw;max-height:320px}.sun{width:108px;height:108px;top:19%}.foot{padding-top:11px;padding-bottom:16px}.stop-1{top:70%}.stop-2{top:67%}.stop-3{top:57%}.stop-4{top:63%}}
+@media(max-width:760px){.masthead{padding:20px 22px 8px;min-height:84px}.identity img{width:43px;height:43px}.identity span{font-size:18px}.identity span small{font-size:8px;margin-top:4px}.landscape{flex:1 0 450px;min-height:450px}.portfolio{top:18px;left:4%;width:92%;height:29vw}.foreground{width:190%;max-width:none;left:-42%;bottom:0}.sun{left:71%;top:47%;width:75px;height:75px}.distant img{top:10%;width:240%;left:-75%;filter:blur(12px) brightness(.25)}.stop,.trail{display:none}.ground-fade{inset:70% 0 0}.mobile-routes{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:12px 20px 16px;background:#050505}.mobile-routes a{text-decoration:none;min-height:54px;padding:9px 12px;background:#12120f;border:1px solid #ffffff10;border-radius:9px}.mobile-routes small{display:block;font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#ac9b80}.mobile-routes strong{display:block;margin-top:2px;font-size:15px;font-weight:600}.foot{display:block;padding:8px 22px 20px;text-align:center;font-size:11px}.languages{justify-content:center;margin-top:17px;gap:22px}}
 </style><style>
-/* Clean entry: only the landscape above and one quiet shortcut below. */
-.entry .entry-footer{padding:18px 230px 22px 5vw!important;min-height:32px;box-sizing:content-box;background:#0A0E45!important}
-.entry .direct-link{margin:0;font:400 14px/1.6 'Hanken Grotesk',sans-serif;color:#c9cde0}
-.entry .direct-link a{color:#f6f4ec!important;font-weight:500;text-underline-offset:4px;text-decoration-thickness:1px}
-.entry .direct-link a:hover{color:white!important}
-@media(max-width:760px){.entry .entry-footer{display:block!important;padding:14px 20px 76px!important;min-height:0}.entry .direct-link{font-size:13px;text-align:center}.entry .mlist{padding-bottom:10px!important}.portfolio-title{top:22px}}
-</style></head>
-<body>
-<div id="dc-root"></div>
-<nav class="lang-switch" aria-label="Idioma · Language · 言語"><a href="../index.html" hreflang="es" lang="es">ES</a><a href="../en/index.html" hreflang="en" lang="en">EN</a><a href="index.html" hreflang="ja" lang="ja" aria-current="page">日本語</a></nav>
-<template id="dc-tpl">
-
-<div class="entry" style="background: {{cobalt}}; color: #FFFFFF; font-family: 'Hanken Grotesk', system-ui, sans-serif; width: 100%; overflow: hidden">
-
-
-
-<section aria-label="La ruta: elige una montaña" class="scene" style="position: relative; height: 600px; max-width: 1440px; margin: 10px auto 0">
-<h1 class="portfolio-title" aria-label="Portfolio"><svg viewBox="0 0 1400 400" role="img" aria-label="Portfolio">
-<defs>
-<linearGradient id="letter-warmth" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe59b"/><stop offset=".5" stop-color="#ffbc52"/><stop offset="1" stop-color="#f17936"/></linearGradient>
-<radialGradient id="light-mask-gradient" gradientUnits="userSpaceOnUse" cx="760" cy="286" r="285"><stop offset="0" stop-color="white"/><stop offset=".46" stop-color="white"/><stop offset=".78" stop-color="#888"/><stop offset="1" stop-color="black"/></radialGradient>
-<mask id="letter-light-mask" maskUnits="userSpaceOnUse" x="-1000" y="-1000" width="3400" height="2400"><rect x="-1000" y="-1000" width="3400" height="2400" fill="url(#light-mask-gradient)"/></mask>
-</defs>
-<text class="title-base" x="700" y="315" text-anchor="middle" textLength="1310" lengthAdjust="spacingAndGlyphs">PORTFOLIO</text>
-<text class="title-lit" x="700" y="315" text-anchor="middle" textLength="1310" lengthAdjust="spacingAndGlyphs" mask="url(#letter-light-mask)" aria-hidden="true">PORTFOLIO</text>
-</svg></h1>
-
-
-<sc-for list="{{stars}}" as="st" hint-placeholder-count="14"><span aria-hidden="true" style="position: absolute; left: {{st.x}}; top: {{st.y}}; width: {{st.s}}; height: {{st.s}}; border-radius: 50%; background: #FFFFFF; opacity: {{st.o}}"></span></sc-for>
-<div class="sun" aria-hidden="true" style="position: absolute; width: 200px; height: 200px; margin-left: -100px; border-radius: 50%; background: #F2C230; box-shadow: 0 0 0 34px rgba(242,194,48,.12), 0 0 0 80px rgba(242,194,48,.06), 0 0 120px 40px rgba(242,194,48,.18)"></div>
-<div aria-hidden="true" style="position: absolute; left: 0; right: 0; bottom: 0; height: 66%; background: linear-gradient(#5562EC, #4652E6); clip-path: polygon(0 100%, 0 40%, 5% 30%, 9% 36%, 14% 20%, 19% 32%, 25% 16%, 31% 30%, 36% 24%, 42% 38%, 48% 18%, 53% 30%, 60% 22%, 67% 36%, 74% 14%, 80% 28%, 86% 20%, 92% 34%, 100% 24%, 100% 100%)"></div>
-<div aria-hidden="true" class="drift" style="position: absolute; left: -5%; right: -5%; bottom: 30%; height: 70px; background: rgba(255,255,255,.10); filter: blur(18px); border-radius: 50%"></div>
-<div aria-hidden="true" style="position: absolute; left: 0; right: 0; bottom: 0; height: 48%; background: linear-gradient(#3E4ADB, #3440CC); clip-path: polygon(0 100%, 0 46%, 7% 34%, 13% 44%, 20% 28%, 28% 42%, 37% 30%, 45% 50%, 54% 32%, 62% 44%, 71% 36%, 80% 50%, 88% 30%, 95% 40%, 100% 34%, 100% 100%)"></div>
-
-<svg aria-hidden="true" viewBox="0 0 100 100" preserveAspectRatio="none" style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 3">
-<polyline points="{{trail}}" fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-dasharray="1.5 6" stroke-linecap="round" vector-effect="non-scaling-stroke" opacity=".7"></polyline>
-</svg>
-
-<sc-for list="{{peaks}}" as="p" hint-placeholder-count="4">
-<a class="peak" data-route="{{p.num}}" href="{{p.href}}" tabindex="-1" aria-hidden="true" style="position: absolute; left: {{p.left}}; bottom: 0; width: {{p.width}}; height: {{p.height}}; clip-path: {{p.clip}}; z-index: {{p.z}}; display: block; --rock-light:{{p.light}}; --rock-dark:{{p.color}}">
-<span style="position: absolute; inset: 0; background: linear-gradient({{p.light}}, {{p.color}})"></span>
-<span style="position: absolute; inset: 0; background: {{p.shade}}; clip-path: {{p.shadeClip}}"></span>
-<svg class="rock-detail" aria-hidden="true" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M52 9 47 29 51 40 40 60 43 73 30 100M55 19 60 34 55 48 68 71 77 100M45 33 35 53 38 60 22 86M61 44 71 57 69 64 87 94" fill="none" stroke="#b6c5ea" stroke-width=".45"/><path d="m49 24-2 5 4 11-11 20 3 13-13 27h8l10-32-1-13 9-15-5-14zM58 30l2 4-5 14 13 23 9 29h9L72 65l-9-18z" fill="#d3dff2" opacity=".28"/></svg>
-<span style="position: absolute; inset: 0; background: linear-gradient(#FFFFFF, #E4E8FF); clip-path: {{p.snow}}"></span>
-<span style="position: absolute; inset: 0; background: #B9C1EE; clip-path: {{p.snowShade}}"></span>
-</a>
-</sc-for>
-
-<div aria-hidden="true" style="position: absolute; left: 0; right: 0; bottom: 0; height: 15%; z-index: 6; background: #0A0E45; clip-path: polygon(0 100%, 0 55%, 6% 40%, 12% 52%, 19% 34%, 27% 50%, 35% 38%, 44% 56%, 52% 42%, 61% 58%, 70% 40%, 79% 54%, 87% 36%, 94% 50%, 100% 42%, 100% 100%)"></div>
-<div aria-hidden="true" class="drift" style="position: absolute; left: 10%; width: 50%; bottom: 10%; height: 40px; z-index: 6; background: rgba(255,255,255,.08); filter: blur(14px); border-radius: 50%"></div>
-
-<sc-for list="{{peaks}}" as="p" hint-placeholder-count="4">
-<a class="tag" data-route="{{p.num}}" href="{{p.href}}" aria-label="{{p.aria}}" style="position: absolute; left: {{p.sx}}; top: {{p.sy}}; transform: translate(-50%, -100%); z-index: 8; display: flex; flex-direction: column; align-items: center; text-decoration: none; color: #17171C">
-<span style="display: flex; flex-direction: column; align-items: flex-start; min-width: 150px; padding: 10px 14px; border-radius: 12px; background: rgba(255,255,255,.96); box-shadow: 0 12px 30px rgba(10,14,69,.35)">
-<span style="font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: {{p.accent}}">{{p.num}} · {{p.kicker}}</span>
-<span style="margin-top: 2px; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 19px; white-space: nowrap">{{p.name}}</span>
-<span class="more" style="display: block; font-size: 13px; line-height: 1.35; color: #3A3E47; max-width: 200px">{{p.desc}} <strong style="color: #17171C">Entrar →</strong></span>
-</span>
-<span style="width: 2px; height: 26px; background: rgba(255,255,255,.9)"></span>
-<span style="width: 10px; height: 10px; border-radius: 50%; background: #FFFFFF; box-shadow: 0 0 0 4px {{p.ring}}"></span>
-</a>
-</sc-for>
+.page{background:radial-gradient(ellipse at 60% 38%,#181511 0%,#080808 52%,#050505 100%)!important}.portfolio text{fill:#f5f5f5}.portfolio text.lit-title{fill:#d6aa70}.foreground{filter:brightness(.77) saturate(.86)!important}.mountain-light{position:absolute;z-index:4;left:0;bottom:-1px;width:100%;aspect-ratio:1672/941;pointer-events:none;background:radial-gradient(ellipse 300px 280px at var(--light-x,60%) var(--light-y,35%),#ffe0aa99 0%,#d6aa7055 38%,transparent 76%);mask-image:url('../img/propuesta-montanas-ilustradas-v1.png');mask-size:100% 100%;mask-repeat:no-repeat;mix-blend-mode:screen}.sun{left:0!important;top:0!important;transform:translate3d(var(--sx,55vw),var(--sy,140px),0)!important;z-index:1!important;width:118px!important;height:118px!important}.stop small{color:#d6aa70}.stop strong{color:#f5f5f5}.identity span{color:#f5f5f5}.foot p a{color:#d6aa70}.palette-note{display:none}@media(max-width:760px){.mountain-light{width:190%;left:-42%;}.sun{width:75px!important;height:75px!important}}
+</style><style>.identity img{width:44px;height:44px}.identity span{font-size:20px}</style><style>
+.portfolio{top:18px}.sun{width:154px!important;height:154px!important}
+.mountain-targets{position:absolute;z-index:5;bottom:-1px;left:0;width:100%;height:auto;aspect-ratio:1672/941;overflow:visible}
+.mountain-targets a{cursor:pointer;outline:none}.mountain-targets polygon{fill:transparent;pointer-events:all;stroke:transparent;stroke-width:2;transition:stroke .2s}
+.mountain-targets a:focus-visible polygon{stroke:#f5d6a0;stroke-dasharray:5 7}
+.stop{pointer-events:none;background:none;padding:6px 10px;border-radius:0;top:84%;transition:color .2s,opacity .2s,transform .2s;text-shadow:0 2px 12px #000,0 1px 4px #000}
+.stop:before{display:none}.stop small{font-size:10px;letter-spacing:.13em}.stop strong{font-size:20px}.stop:after{content:'↗';display:inline-block;margin-top:4px;font-size:17px;color:#d6aa70;opacity:.55;transition:opacity .2s,transform .2s}
+.landscape[data-active="01"] .stop-1,.landscape[data-active="02"] .stop-2,.landscape[data-active="03"] .stop-3,.landscape[data-active="04"] .stop-4{transform:translate(-50%,-60%)}
+.landscape[data-active="01"] .stop-1:after,.landscape[data-active="02"] .stop-2:after,.landscape[data-active="03"] .stop-3:after,.landscape[data-active="04"] .stop-4:after{opacity:1;transform:translate(2px,-2px)}
+@media(max-width:760px){.portfolio{top:30px}.sun{width:96px!important;height:96px!important}.mountain-targets{display:none}}
+</style><style>
+/* Route captions sit outside the illustration, along its lower edge. */
+.landscape{margin-bottom:74px}
+.stop{top:auto!important;bottom:-70px;transform:translateX(-50%);pointer-events:auto;min-width:0;width:21%;padding:13px 4px 5px;text-align:left;text-shadow:none;border-top:1px solid #ffffff24;transition:border-color .25s,color .25s}
+.stop:after{position:absolute;right:5px;top:19px;margin:0;opacity:.45;font-size:20px}
+.stop small{font-size:10px;letter-spacing:.11em;color:#b8b5b0;transition:color .25s}.stop strong{font-size:20px;color:#f5f5f5;padding-right:24px}
+.stop:hover,.landscape[data-active="01"] .stop-1,.landscape[data-active="02"] .stop-2,.landscape[data-active="03"] .stop-3,.landscape[data-active="04"] .stop-4{transform:translateX(-50%);border-color:#d6aa70}
+.stop:hover small,.landscape[data-active="01"] .stop-1 small,.landscape[data-active="02"] .stop-2 small,.landscape[data-active="03"] .stop-3 small,.landscape[data-active="04"] .stop-4 small{color:#d6aa70}
+.stop-1{left:15.7%}.stop-2{left:38.55%}.stop-3{left:61.4%}.stop-4{left:84.25%}
+@media(min-width:761px){.landscape{min-height:520px;flex-basis:520px}}
+@media(max-width:760px){.landscape{margin-bottom:0}.stop{display:none}}
+</style><style>@media(min-width:761px){.landscape{--scene-crop:max(0px,calc(56.28vw - 80svh))}.foreground,.mountain-targets,.mountain-light{bottom:calc(-1px - var(--scene-crop));clip-path:inset(0 0 var(--scene-crop) 0)}} </style><style>
+@media(min-width:761px){
+.landscape{margin-bottom:0}
+.stop{top:auto!important;bottom:24px;width:auto;min-width:165px;padding:10px 17px;text-align:center;border:0;border-radius:0;background:none;opacity:0;visibility:hidden;pointer-events:none;transform:translate(-50%,8px);transition:opacity .2s,transform .2s,visibility .2s;text-shadow:0 2px 8px #000}
+.stop small{color:#d6aa70}.stop strong{padding:0;font-size:24px}.stop:after{position:static;display:inline-block;margin:3px 0 0;font-size:16px}
+.stop-1{left:13.5%}.stop-2{left:35%}.stop-3{left:60%}.stop-4{left:86%}
+.landscape[data-active="01"] .stop-1,.landscape[data-active="02"] .stop-2,.landscape[data-active="03"] .stop-3,.landscape[data-active="04"] .stop-4{opacity:1;visibility:visible;transform:translate(-50%,0);border:0}
+}
+</style><meta name="description" content="マーケティング、コンテンツ、コミュニティ。仕事や趣味、日本で暮らし働いた経験をご紹介します。"><link rel="canonical" href="https://arnauruizr-jpg.github.io/ja/"><meta property="og:type" content="website"><meta property="og:title" content="Arnau Ruiz Roca | ポートフォリオ"><meta property="og:description" content="マーケティング、コンテンツ、コミュニティ。仕事や趣味、日本で暮らし働いた経験をご紹介します。"><meta property="og:url" content="https://arnauruizr-jpg.github.io/ja/"><meta property="og:image" content="https://arnauruizr-jpg.github.io/img/portfolio-cover.jpg"></head><body><main class="page">
+<div class="distant" aria-hidden="true"><img src="../img/propuesta-montanas-ilustradas-v1.png" alt=""></div>
+<header class="masthead"><a class="identity" href="quien-soy.html"><img src="../img/arnau-retrato.jpg" alt="Arnau Ruiz Roca"><span>ARNAU<br>RUIZ ROCA</span></a></header>
+<section class="landscape" aria-label="Las cuatro montañas de mi portfolio">
+<h1 class="portfolio" aria-label="Portfolio"><svg viewBox="0 0 1400 400" role="img" aria-label="Portfolio"><defs><radialGradient id="hero-light-gradient" gradientUnits="userSpaceOnUse" cx="850" cy="300" r="280"><stop offset="0" stop-color="white"/><stop offset=".45" stop-color="white"/><stop offset="1" stop-color="black"/></radialGradient><mask id="hero-light-mask" maskUnits="userSpaceOnUse" x="-1000" y="-1000" width="3400" height="2400"><rect x="-1000" y="-1000" width="3400" height="2400" fill="url(#hero-light-gradient)"/></mask></defs><text x="700" y="315" text-anchor="middle" textLength="1300" lengthAdjust="spacingAndGlyphs">PORTFOLIO</text><text class="lit-title" x="700" y="315" text-anchor="middle" textLength="1300" lengthAdjust="spacingAndGlyphs" mask="url(#hero-light-mask)" aria-hidden="true">PORTFOLIO</text></svg></h1>
+<div class="sun" aria-hidden="true"></div>
+<div class="mountain-light" aria-hidden="true"></div>
+<img class="foreground" src="../img/propuesta-montanas-ilustradas-v1.png" alt="Ilustración realista: agujas de Montserrat, cima de La Mola, cono del Fuji y crestas alpinas">
+<svg class="mountain-targets" viewBox="0 0 1672 941" aria-label="Explorar las montañas"><a href="quien-soy.html" data-route="01" aria-label="Montserrat"><polygon points="0,941 0,515 45,477 83,493 112,453 159,460 197,509 243,555 294,646 365,718 430,941"/></a><a href="aficiones.html" data-route="02" aria-label="La Mola"><polygon points="300,941 262,688 294,586 354,570 430,539 499,533 526,494 562,532 620,548 688,575 738,655 792,941"/></a><a href="japon.html" data-route="03" aria-label="Monte Fuji"><polygon points="650,941 636,570 721,469 813,375 924,280 995,273 1090,367 1188,467 1274,546 1207,686 1120,941"/></a><a href="trabajos.html" data-route="04" aria-label="Los Alpes"><polygon points="1090,941 1118,674 1190,552 1270,433 1340,390 1403,312 1459,352 1513,365 1560,402 1610,361 1672,416 1672,941"/></a></svg>
+<div class="ground-fade" aria-hidden="true"></div>
+<svg class="trail" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M13.5 61 Q24 65 35 59 T60 51 Q73 52 86 55"/></svg>
+<a aria-hidden="true" tabindex="-1" class="stop stop-1" data-route="01" href="quien-soy.html"><small>Montserrat</small><strong>自己紹介</strong></a>
+<a aria-hidden="true" tabindex="-1" class="stop stop-2" data-route="02" href="aficiones.html"><small>La Mola</small><strong>趣味</strong></a>
+<a aria-hidden="true" tabindex="-1" class="stop stop-3" data-route="03" href="japon.html"><small>富士山</small><strong>日本</strong></a>
+<a aria-hidden="true" tabindex="-1" class="stop stop-4" data-route="04" href="trabajos.html"><small>アルプス</small><strong>仕事</strong></a>
 </section>
-
-<nav class="mlist" aria-label="Etapas" style="flex-direction: column; gap: 8px; padding: 18px 22px 8px; background: #0A0E45">
-<sc-for list="{{peaks}}" as="p" hint-placeholder-count="4">
-<a href="{{p.href}}" style="display: flex; justify-content: space-between; align-items: center; min-height: 56px; padding: 0 16px; border-radius: 12px; background: rgba(255,255,255,.08); color: #FFFFFF; text-decoration: none"><span><span style="font-size: 12px; opacity: .7">{{p.num}}</span> <strong style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 18px">{{p.name}}</strong></span><span aria-hidden="true">→</span></a>
-</sc-for>
-</nav>
-
-<footer class="entry-footer"><p class="direct-link">作品から見たい方へ。<a href="trabajos.html">仕事を見る。</a></p></footer>
-</div>
-</template>
-<script type="application/json" id="dc-props">{"cobalt":{"editor":"color","default":"#2A35D8","options":["#2A35D8","#1F2BB8","#3B2FD1","#0F5BD8"],"section":"Color"},"apricot":{"editor":"color","default":"#FFB38A","options":["#FFB38A","#FFC9A3","#FF9F7A","#F7D46B"],"section":"Color"},"$preview":{"width":1280,"height":1000}}</script>
-<script src="../dc.js"></script>
-<script>
-class Component extends DCLogic {
-renderVals() {
-const apricot = this.props.apricot ?? '#FFB38A';
-const none = 'polygon(0 0,0 0,0 0)';
-const P = [
-{ num: '01', kicker: 'ベースキャンプ', name: '自己紹介', desc: '仕事の進め方、興味のあること、これまでに学んできたこと。', href: 'quien-soy.html', accent: '#C2643C', ring: 'rgba(255,179,138,.6)',
-left: 0, w: 26, h: 43, sx: .52, sy: .14, z: 4, color: '#B9684A', light: '#F1AA86',
-clip: 'polygon(0 100%, 18% 60%, 34% 40%, 46% 22%, 52% 14%, 60% 24%, 72% 40%, 86% 62%, 100% 100%)', shade: 'rgba(110,50,30,.35)', shadeClip: 'polygon(52% 14%, 60% 24%, 72% 40%, 86% 62%, 100% 100%, 50% 100%, 56% 60%)', snow: none, snowShade: none },
-{ num: '02', kicker: '仕事の外', name: '趣味', desc: 'サッカー、山、柔術。仕事以外の私の生活を少しだけ。', href: 'aficiones.html', accent: '#2A35D8', ring: 'rgba(255,255,255,.5)',
-left: 18, w: 28, h: 62, sx: .58, sy: .03, z: 3, color: '#151C78', light: '#3747C8',
-clip: 'polygon(0 100%,12% 76%,22% 55%,28% 49%,32% 40%,37% 47%,42% 50%,49% 28%,53% 23%,58% 3%,62% 14%,66% 19%,70% 26%,75% 38%,82% 46%,87% 63%,93% 77%,100% 100%)', shade: 'rgba(8,10,50,.45)', shadeClip: 'polygon(58% 3%, 70% 26%, 82% 46%, 100% 100%, 52% 100%, 60% 44%)', snow: 'polygon(50% 16%, 58% 3%, 66% 18%, 62% 16%, 58% 24%, 54% 17%)', snowShade: 'polygon(58% 3%, 66% 18%, 62% 16%, 58% 24%)' },
-{ num: '03', kicker: '富士山 · Fuji', name: '日本', desc: '言葉を学び、働き、異なる文化の中で自分の居場所を見つけるまで。', href: 'japon.html', accent: '#9A7400', ring: 'rgba(242,194,48,.6)',
-left: 39, w: 36, h: 76, sx: .5, sy: .06, z: 2, color: '#12141B', light: '#353A48',
-clip: 'polygon(0 100%,14% 73%,22% 54%,29% 35%,36% 16%,41% 11%,44% 6%,48% 7%,52% 6%,56% 6%,60% 11%,64% 16%,72% 38%,80% 58%,90% 80%,100% 100%)', shade: 'rgba(0,0,0,.35)', shadeClip: 'polygon(50% 6%, 56% 6%, 64% 14%, 100% 100%, 46% 100%)', snow: 'polygon(36% 14%, 44% 6%, 56% 6%, 64% 14%, 66% 20%, 61% 24%, 59% 36%, 55% 26%, 52% 38%, 49% 24%, 46% 34%, 43% 24%, 38% 22%, 34% 18%)', snowShade: 'polygon(50% 6%, 56% 6%, 64% 14%, 66% 20%, 61% 24%, 59% 36%, 55% 26%, 52% 38%)' },
-{ num: '04', kicker: '今いる頂', name: '仕事', desc: '制作したコンテンツと、それを支えた経験から。', href: 'trabajos.html', accent: '#2A35D8', ring: 'rgba(255,179,138,.7)',
-left: 68, w: 32, h: 68, sx: .58, sy: .02, z: 4, color: '#23354E', light: '#63829C',
-clip: 'polygon(0 100%,8% 78%,13% 72%,19% 48%,26% 33%,31% 26%,37% 30%,43% 45%,49% 18%,54% 8%,58% 2%,64% 7%,69% 17%,72% 36%,78% 23%,83% 25%,88% 44%,91% 65%,100% 100%)', shade: 'rgba(12,28,47,.50)', shadeClip: 'polygon(58% 2%,64% 7%,69% 17%,72% 36%,78% 23%,83% 25%,100% 100%,49% 100%,55% 52%,51% 23%)', snow: 'polygon(54% 8%,58% 2%,64% 7%,69% 17%,65% 15%,63% 19%,60% 12%,57% 17%,54% 13%,50% 20%)', snowShade: 'polygon(58% 2%,64% 7%,69% 17%,65% 15%,63% 19%,60% 12%,57% 17%)' }
-];
-const peaks = P.map((p) => ({ ...p, left: p.left + '%', width: p.w + '%', height: p.h + '%',
-sx: (p.left + p.w * p.sx) + '%', sy: Math.max(60,100 - p.h + p.h * p.sy) + '%',
-aria: '入る：' + p.name + ': ' + p.desc }));
-const trail = P.map((p) => (p.left + p.w * p.sx).toFixed(1) + ',' + Math.max(60,100 - p.h + p.h * p.sy).toFixed(1)).join(' ');
-return {
-cobalt: this.props.cobalt ?? '#2A35D8', apricot, peaks, trail,
-stars: [[4,8,3],[9,22,2],[15,6,2],[27,14,3],[33,4,2],[41,18,2],[72,8,2],[78,22,3],[85,10,2],[91,4,3],[96,17,2],[23,26,2],[66,30,2],[12,34,2]].map(([x,y,s]) => ({ x: x + '%', y: y + '%', s: s + 'px', o: s > 2 ? .9 : .55 }))
-};
-}
-}
-window.Component = Component;
-</script>
-
-<script src="../portfolio-light.js"></script>
-</body>
-</html>
+<nav class="mobile-routes" aria-label="Explorar una montaña"><a href="quien-soy.html"><small>Montserrat</small><strong>自己紹介</strong></a><a href="aficiones.html"><small>La Mola</small><strong>趣味</strong></a><a href="japon.html"><small>富士山</small><strong>日本</strong></a><a href="trabajos.html"><small>アルプス</small><strong>仕事</strong></a></nav>
+<footer class="foot"><p>作品から見たい方へ。 <a href="trabajos.html">仕事を見る。</a></p><nav class="languages" aria-label="Language"><a href="../index.html">ES</a><a href="../en/index.html">EN</a><a href="../ja/index.html" aria-current="page">日本語</a></nav></footer>
+</main><script src="../illustrated-light.js"></script></body></html>

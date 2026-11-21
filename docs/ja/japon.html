@@ -37,8 +37,8 @@ html[lang=ja] body{line-break:strict;overflow-wrap:anywhere}
 html[lang=ja] .stop .sh{display:none!important}
 html[lang=ja] h1,html[lang=ja] h2,html[lang=ja] h3{word-break:keep-all;overflow-wrap:anywhere}
 </style>
-</head>
-<body>
+<link rel="stylesheet" href="../dark-theme.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&amp;display=swap"><link rel="stylesheet" href="../japan-panel.css"></head>
+<body class="jp-panel-page">
 <div id="dc-root"></div>
 <nav class="lang-switch" aria-label="Idioma · Language · 言語"><a href="../japon.html" hreflang="es" lang="es">ES</a><a href="../en/japon.html" hreflang="en" lang="en">EN</a><a href="japon.html" hreflang="ja" lang="ja" aria-current="page">日本語</a></nav>
 <template id="dc-tpl">
@@ -47,7 +47,7 @@ html[lang=ja] h1,html[lang=ja] h2,html[lang=ja] h3{word-break:keep-all;overflow-
 
 <div class="dark" style="background: #1E2B4F; color: #FFFFFF">
 <div class="jhd" style="max-width: 1180px; margin: 0 auto; padding: 14px 48px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap">
-<a href="index.html" style="display: inline-flex; align-items: center; gap: 10px; min-height: 44px; color: #FFFFFF; text-decoration: none; font-weight: 700"><svg width="46" height="26" viewBox="0 0 46 26" aria-hidden="true"><polyline points="1,24 12,10 18,16 28,3 37,13 45,24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="28" cy="3" r="2.6" fill="#F2C230"></circle></svg>アルナウ・ルイス・ロカ</a>
+<a class="site-identity" href="index.html" aria-label="Arnau Ruiz Roca · Inicio"><img src="../img/arnau-retrato.jpg" alt=""><span>ARNAU<br>RUIZ ROCA</span></a>
 <p class="anden" style="margin: 0; display: flex; align-items: center; gap: 12px; font-weight: 700">
 <span class="num" style="display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; background: #F2C230; color: #1E2B4F; font-family: 'Zen Kaku Gothic New', sans-serif; font-weight: 900; font-size: 18px">1</span>
 <span><span lang="ja" style="font-family: 'Zen Kaku Gothic New', sans-serif">1番線 · アルナウ線</span> <span style="opacity: .8"></span></span>
@@ -61,103 +61,10 @@ html[lang=ja] h1,html[lang=ja] h2,html[lang=ja] h3{word-break:keep-all;overflow-
 
 <div class="jwrap" style="max-width: 1180px; margin: 0 auto; padding: 0 48px; box-sizing: border-box">
 
-<section class="jhero" style="display: flex; flex-wrap: wrap; gap: 32px; align-items: stretch; padding: 40px 0 28px">
-<div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; justify-content: space-between; gap: 24px">
-<div>
-<p style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #1E2B4F">山頂 03 · 日本</p>
-<h1 style="margin: 8px 0 0; font-family: 'Zen Kaku Gothic New', sans-serif; font-weight: 900; font-size: clamp(38px, 5vw, 66px); line-height: 1.02; letter-spacing: -.02em">日本での​暮らしを、​一駅ずつ。</h1>
-<p style="margin: 16px 0 0; max-width: 50ch; font-size: 18px; line-height: 1.55; color: #3A3E47">慣れ親しんだ場所を離れ、別の場所で暮らすことを学びました。違う言葉、仕事、新しい人たち、そして違うやり方。この6つの駅で、自分の居場所を見つけていった過程をお伝えします。</p>
-<p style="margin: 10px 0 0; font-size: 15px; color: #555B66">路線図から駅を選ぶか、矢印に沿って進んでください。</p>
-</div>
-<div class="dark" role="group" aria-label="発車案内" style="background: #0F1012; border-radius: 10px; padding: 16px 18px; box-shadow: inset 0 0 0 4px #2A2C31; font-family: 'DotGothic16', 'Zen Kaku Gothic New', monospace">
-<div style="display: grid; grid-template-columns: 7em 1fr; gap: 8px 14px; align-items: baseline; color: #FFB547; font-size: 18px">
-<span style="color: #7CE38B"> <span lang="ja">ただいま</span></span><span>{{cur.es}} <span class="blink" style="color: #FF6B5E">●</span></span>
-<span style="color: #7CE38B"> <span lang="ja">つぎは</span></span><span>{{nextEs}}</span>
-<span style="color: #7CE38B">路線</span><span>日本での経験</span>
-</div>
-</div>
-</div>
-<figure class="jphoto" style="flex: 1 1 360px; min-width: 0; margin: 0; position: relative; border-radius: 10px; overflow: hidden; min-height: 420px; background: #2A2C31">
-<img src="../img/japon-anden-arashiyama.jpg" alt="夕暮れの嵐山駅のホーム。灯りのともった提灯とえんじ色の電車" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 45%; display: block">
-<figcaption style="position: absolute; left: 14px; bottom: 14px; display: inline-flex; align-items: center; min-height: 32px; padding: 0 12px; border-radius: 6px; background: #1E2B4F; color: #FFFFFF; font-size: 14px; font-weight: 600"><span lang="ja" style="font-family: 'Zen Kaku Gothic New', sans-serif; margin-right: 6px">嵐山</span> Arashiyama</figcaption>
-</figure>
-</section>
-
-<nav class="jmap" aria-label="路線図" style="position: relative; background: #FFFFFF; border-radius: 10px; padding: 18px 22px 16px; box-shadow: 0 1px 0 rgba(0,0,0,.08)">
-<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 20px; margin-bottom: 8px">
-<div style="min-width: 0">
-<p style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #1E2B4F"><span lang="ja" style="font-family: 'Zen Kaku Gothic New', sans-serif; letter-spacing: .04em">路線図</span> </p>
-<p style="margin: 4px 0 0; font-family: 'Zen Kaku Gothic New', sans-serif; font-weight: 900; font-size: 22px; color: #17181C">電車に乗って： <span style="color: #1E2B4F">日本での日々を6つの駅で</span></p>
-</div>
-<div class="ctrl" style="display: flex; align-items: center; gap: 10px">
-<span aria-live="polite" style="font-size: 15px; font-weight: 700; color: #555B66">駅 {{curNumInt}} / 6</span>
-<sc-if value="{{notStart}}" hint-placeholder-val="{{ false }}"><button class="fromstart" type="button" onClick="{{goFirst}}" style="min-height: 44px; padding: 0 6px; border: 0; background: transparent; color: #1E2B4F; font: inherit; font-size: 14px; font-weight: 700; text-decoration: underline; cursor: pointer">最初の駅から</button></sc-if>
-<button type="button" onClick="{{goPrev}}" disabled="{{atStart}}" aria-label="{{prevAria}}" style="min-height: 52px; min-width: 52px; border-radius: 999px; border: 2px solid #1E2B4F; background: #FFFFFF; color: #1E2B4F; font: inherit; font-size: 18px; font-weight: 900; cursor: pointer; opacity: {{prevOpacity}}">◀</button>
-<sc-if value="{{notEnd}}" hint-placeholder-val="{{ true }}"><button class="nx" type="button" onClick="{{goNext}}" aria-label="{{nextAria}}" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 22px; border-radius: 999px; border: 0; background: #F2C230; color: #17181C; font: inherit; font-size: 17px; font-weight: 900; cursor: pointer; box-shadow: 0 4px 0 #C99A00">次の駅へ <span aria-hidden="true" style="font-size: 20px">▶</span></button></sc-if>
-<sc-if value="{{atEnd}}" hint-placeholder-val="{{ false }}"><a href="trabajos.html" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 22px; border-radius: 999px; background: #1E2B4F; color: #FFFFFF; text-decoration: none; font-size: 17px; font-weight: 900">電車を降りる · 仕事 <span aria-hidden="true">▶</span></a></sc-if>
-</div>
-</div>
-<div style="position: relative">
-<div aria-hidden="true" style="position: absolute; left: 6%; right: 6%; top: 52px; height: 14px; border-radius: 3px; background: #E4E2DC; background-image: repeating-linear-gradient(90deg, #A8A29A 0 5px, transparent 5px 18px)"></div>
-<div aria-hidden="true" style="position: absolute; left: 6%; right: 6%; top: 54px; height: 3px; background: #6B6F78"></div>
-<div aria-hidden="true" style="position: absolute; left: 6%; right: 6%; top: 61px; height: 3px; background: #6B6F78"></div>
-<div aria-hidden="true" style="position: absolute; left: 6%; right: 6%; top: 52px; height: 14px">
-<div class="trainpos" style="position: absolute; left: 0; top: 0; width: {{trainLeft}}; height: 14px; border-radius: 3px; background: rgba(242,194,48,.85); transition: width .7s cubic-bezier(.65,0,.35,1)"></div>
-<div style="position: absolute; inset: 0; display: flex; justify-content: space-around; align-items: center; color: #1E2B4F; font-weight: 900; font-size: 13px; opacity: .55"><span>›</span><span>›</span><span>›</span><span>›</span><span>›</span><span>›</span><span>›</span><span>›</span><span>›</span><span>›</span></div>
-</div>
-<div aria-hidden="true" style="position: absolute; left: 6%; right: 6%; top: 4px; height: 0; z-index: 2">
-<div class="trainpos" style="position: absolute; left: {{trainLeft}}; top: 0; width: 108px; height: 46px; margin-left: -54px"><div class="train" style="position: absolute; inset: 0">
-<div style="position: absolute; left: 0; right: 0; top: 0; height: 40px; border-radius: 22px 8px 6px 6px; background: #1E2B4F; box-shadow: inset 0 -6px 0 #F2C230">
-<span style="position: absolute; left: 12px; top: 8px; width: 20px; height: 14px; border-radius: 3px; background: #CFE0F5"></span>
-<span style="position: absolute; left: 38px; top: 8px; width: 20px; height: 14px; border-radius: 3px; background: #CFE0F5"></span>
-<span style="position: absolute; left: 64px; top: 8px; width: 20px; height: 14px; border-radius: 3px; background: #CFE0F5"></span>
-<span style="position: absolute; right: 4px; top: 8px; width: 12px; height: 18px; border-radius: 0 10px 3px 0; background: #CFE0F5"></span>
-</div>
-<span style="position: absolute; left: 14px; bottom: 0; width: 12px; height: 12px; border-radius: 50%; background: #17181C"></span>
-<span style="position: absolute; left: 34px; bottom: 0; width: 12px; height: 12px; border-radius: 50%; background: #17181C"></span>
-<span style="position: absolute; right: 34px; bottom: 0; width: 12px; height: 12px; border-radius: 50%; background: #17181C"></span>
-<span style="position: absolute; right: 14px; bottom: 0; width: 12px; height: 12px; border-radius: 50%; background: #17181C"></span>
-</div></div>
-</div>
-<ol style="position: relative; list-style: none; margin: 0; padding: 0; display: flex; justify-content: space-between; gap: 4px">
-<sc-for list="{{stations}}" as="s" hint-placeholder-count="6">
-<li style="flex: 1 1 0; min-width: 0; display: flex; justify-content: center">
-<button class="stop" type="button" onClick="{{s.pick}}" aria-current="{{s.current}}" aria-label="{{s.aria}}" style="display: flex; flex-direction: column; align-items: center; gap: 6px; min-width: 56px; padding: 44px 4px 4px; border: 0; background: transparent; color: #17181C; font: inherit; cursor: pointer">
-<span style="width: 30px; height: 30px; border-radius: 50%; background: {{s.dot}}; border: 6px solid #F2C230; box-sizing: border-box"></span>
-<span class="code" style="display: inline-flex; align-items: center; justify-content: center; min-width: 44px; height: 22px; padding: 0 4px; border: 2px solid #1E2B4F; border-radius: 4px; font-family: 'Zen Kaku Gothic New', sans-serif; font-weight: 900; font-size: 11px; color: #1E2B4F">{{s.code}}</span>
-<span class="kj" lang="ja" style="font-family: 'Zen Kaku Gothic New', sans-serif; font-weight: 900; font-size: 18px; color: {{s.labelColor}}">{{s.kanji}}</span>
-<span class="es" style="font-size: 13px; color: #555B66">{{s.es}}</span>
-<span class="sh" style="display: none; font-size: 11px; line-height: 1.15; font-weight: 700; color: {{s.labelColor}}; text-align: center">{{s.short}}</span>
-</button>
-</li>
-</sc-for>
-</ol>
-</div>
-</nav>
-
-<section class="board" aria-live="polite" aria-label="駅名標" style="margin-top: 28px; position: relative; background: #FFFFFF; color: #17181C; border-radius: 8px; overflow: hidden; border: 2px solid #D5D7DB">
-<div class="jsign" style="display: flex; align-items: center; gap: 22px; padding: 22px 28px 16px; flex-wrap: wrap">
-<span class="arbox" style="display: inline-flex; flex-direction: column; align-items: center; justify-content: center; width: 64px; height: 64px; border: 5px solid #F2C230; border-radius: 10px; font-family: 'Zen Kaku Gothic New', sans-serif; font-weight: 900; line-height: 1"><span style="font-size: 13px">AR</span><span style="font-size: 24px">{{cur.num}}</span></span>
-<div style="flex: 1 1 280px; min-width: 0; text-align: center">
-<p class="kana" lang="ja" style="margin: 0; font-family: 'Zen Kaku Gothic New', sans-serif; font-weight: 900; font-size: clamp(40px, 6vw, 72px); line-height: 1; letter-spacing: .08em">{{cur.kana}}</p>
-<p style="margin: 8px 0 0; display: flex; justify-content: center; align-items: baseline; gap: 14px; flex-wrap: wrap"><span lang="ja" style="font-family: 'Zen Kaku Gothic New', sans-serif; font-weight: 700; font-size: 24px">{{cur.kanji}}</span><span style="font-family: 'Zen Kaku Gothic New', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: .04em">{{cur.romaji}}</span><span style="font-size: 16px; color: #555B66">· {{cur.es}}</span></p>
-</div>
-<span class="sp" aria-hidden="true" style="width: 64px"></span>
-</div>
-<div class="jbar" style="display: flex; justify-content: space-between; align-items: stretch; background: #F2C230">
-<button type="button" onClick="{{goPrev}}" disabled="{{atStart}}" aria-label="{{prevAria}}" style="display: flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 22px; border: 0; background: transparent; color: #17181C; font: inherit; font-weight: 700; cursor: pointer; opacity: {{prevOpacity}}"><span aria-hidden="true">◀</span><span lang="ja" style="font-family: 'Zen Kaku Gothic New', sans-serif">{{prevKanji}}</span><span class="rj" style="font-size: 14px">{{prevRomaji}}</span></button>
-<sc-if value="{{notEnd}}" hint-placeholder-val="{{ true }}"><button type="button" onClick="{{goNext}}" aria-label="{{nextAria}}" style="display: flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 22px; border: 0; background: transparent; color: #17181C; font: inherit; font-weight: 700; cursor: pointer"><span class="rj" style="font-size: 14px">{{nextRomaji}}</span><span lang="ja" style="font-family: 'Zen Kaku Gothic New', sans-serif">{{nextKanji}}</span><span aria-hidden="true">▶</span></button></sc-if>
-<sc-if value="{{atEnd}}" hint-placeholder-val="{{ false }}"><a href="trabajos.html" style="display: flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 22px; color: #17181C; font-weight: 700; text-decoration: none"><span style="font-size: 14px">続ける · 仕事</span><span aria-hidden="true">▶</span></a></sc-if>
-</div>
-<sc-if value="{{even}}" hint-placeholder-val="{{ false }}"><div class="pass" aria-hidden="true" style="position: absolute; left: 0; right: 0; top: 0; height: 16px; pointer-events: none; display: flex; align-items: center; background: #6B1E2A"><span style="flex: 1 1 auto; height: 50%; margin: 0 30px; background: repeating-linear-gradient(90deg, #C9D6E8 0 70px, #6B1E2A 70px 90px)"></span></div></sc-if>
-<sc-if value="{{odd}}" hint-placeholder-val="{{ false }}"><div class="pass" aria-hidden="true" style="position: absolute; left: 0; right: 0; top: 0; height: 16px; pointer-events: none; display: flex; align-items: center; background: #6B1E2A"><span style="flex: 1 1 auto; height: 50%; margin: 0 30px; background: repeating-linear-gradient(90deg, #C9D6E8 0 70px, #6B1E2A 70px 90px)"></span></div></sc-if>
-</section>
-
-<div aria-hidden="true" style="margin-top: 0; height: 8px; background: #FFFFFF"></div>
-<div aria-hidden="true" class="tactile" style="height: 26px"></div>
-<p style="margin: 8px 0 0; font-size: 13px; color: #555B66"><span lang="ja" style="font-family: 'Zen Kaku Gothic New', sans-serif; font-weight: 700">黄色い線の内側でお待ちください</span> </p>
-
-<section class="arrive jstory" style="display: flex; flex-wrap: wrap; gap: 36px; align-items: flex-start; padding: 36px 0 48px">
+<section class="jp-intro"><p class="jp-kicker">富士山 · 日本</p><h1>日本での暮らし。</h1><p>言葉を学び、働き、異なる文化の中で自分の居場所を見つける。駅を選んで、この経験をご覧ください。</p></section>
+<nav class="jp-wayfinding" aria-label="駅を選んでください"><div class="jp-panel-heading"><div class="jp-sign-name"><span class="jp-sign-direction">日本での経験</span><strong class="jp-sign-kanji" lang="ja">{{cur.kanji}}</strong><span class="jp-sign-spanish">{{cur.es}}</span></div><span class="jp-line-badge" aria-hidden="true"><span>AR</span><strong>{{cur.num}}</strong></span></div><ol class="jp-stations"><sc-for list="{{stations}}" as="s" hint-placeholder-count="6"><li><button class="jp-station" type="button" onClick="{{s.pick}}" aria-current="{{s.current}}" aria-label="{{s.aria}}" aria-controls="jp-story"><span class="jp-stop-dot" aria-hidden="true"></span><span class="jp-stop-code">{{s.code}}</span><span class="jp-stop-label">{{s.es}}</span><span class="jp-stop-kanji" lang="ja">{{s.kanji}}</span></button></li></sc-for></ol>
+<div class="jp-current-row"><p class="jp-panel-help">駅を選んでください</p><div class="jp-controls"><button type="button" onClick="{{goPrev}}" disabled="{{atStart}}" aria-label="{{prevAria}}" aria-controls="jp-story">←</button><span aria-hidden="true">{{curNumInt}} / 6</span><button type="button" onClick="{{goNext}}" disabled="{{atEnd}}" aria-label="{{nextAria}}" aria-controls="jp-story">→</button></div></div></nav>
+<section id="jp-story" class="arrive jstory" style="display: flex; flex-wrap: wrap; gap: 36px; align-items: flex-start; padding: 36px 0 48px">
 <div style="flex: 1 1 360px; min-width: 0; display: flex; gap: 14px">
 <sc-for list="{{cur.photos}}" as="ph" hint-placeholder-count="1">
 <figure style="margin: 0; flex: 1 1 0; min-width: 0; background: #FFFFFF; padding: 10px; border-radius: 8px; box-shadow: 0 0 0 2px #1E2B4F">
@@ -205,11 +112,7 @@ html[lang=ja] h1,html[lang=ja] h2,html[lang=ja] h3{word-break:keep-all;overflow-
 </div>
 </section>
 
-<nav aria-label="駅の出口" style="display: flex; flex-wrap: wrap; gap: 14px; padding: 8px 0 48px">
-<a href="trabajos.html" style="flex: 1 1 280px; display: flex; align-items: center; gap: 14px; min-height: 64px; padding: 0 20px; border-radius: 8px; background: #FFD400; color: #17181C; text-decoration: none; font-weight: 800; font-size: 17px"><span lang="ja" style="font-family: 'Zen Kaku Gothic New', sans-serif; font-size: 22px">出口</span><span>出口 · 仕事</span><span aria-hidden="true" style="margin-left: auto">→</span></a>
-<a href="masia.html" style="flex: 1 1 280px; display: flex; align-items: center; gap: 14px; min-height: 64px; padding: 0 20px; border-radius: 8px; background: #F08A24; color: #17181C; text-decoration: none; font-weight: 800; font-size: 17px"><span lang="ja" style="font-family: 'Zen Kaku Gothic New', sans-serif; font-size: 22px">のりかえ</span><span>乗り換え · Masia（銀座）</span><span aria-hidden="true" style="margin-left: auto">→</span></a>
-<a href="index.html" style="flex: 1 1 200px; display: flex; align-items: center; gap: 14px; min-height: 64px; padding: 0 20px; border-radius: 8px; background: #1E2B4F; color: #FFFFFF; text-decoration: none; font-weight: 800; font-size: 17px"><span aria-hidden="true">⛰</span><span>ルートに戻る</span></a>
-</nav>
+<footer class="jp-footer"><a href="index.html">← 山々に戻る</a></footer>
 
 </div>
 </div>
@@ -272,5 +175,5 @@ nextAria: next ? '次の駅：' + next.es : '次の駅はありません'
 }
 window.Component = Component;
 </script>
-</body>
+<script src="../dark-theme.js"></script><script src="../japan-metro.js"></script></body>
 </html>

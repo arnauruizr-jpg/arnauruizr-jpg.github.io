@@ -1,0 +1,68 @@
+{
+  "as_of": "2026-11-20",
+  "role_started": "2026-10-16",
+  "platform": "Instagram",
+  "metric": "followers",
+  "accounts": [
+    {
+      "name": "FISENCE",
+      "handle": "fisence_shop",
+      "value": 781,
+      "source_url": "https://www.instagram.com/fisence_shop/",
+      "observed_on": "2026-11-20",
+      "type": "current_account_total",
+      "original_post": "https://www.instagram.com/fisence_shop/p/DfsOYlMGarq/"
+    },
+    {
+      "name": "5th Essence",
+      "handle": "5thessence",
+      "value": 12014,
+      "source_url": "https://www.instagram.com/5thessence/",
+      "observed_on": "2026-11-20",
+      "type": "current_account_total",
+      "original_post": "https://www.instagram.com/5thessence/p/Df5UFS-idJt/"
+    },
+    {
+      "name": "Montale Barcelona",
+      "handle": "montalebarcelona_official",
+      "value": 1980,
+      "source_url": "https://www.instagram.com/montalebarcelona_official/",
+      "observed_on": "2026-11-20",
+      "type": "current_account_total",
+      "original_post": "https://www.instagram.com/montalebarcelona_official/p/Df5NOWVlyoK/"
+    },
+    {
+      "name": "Mancera Barcelona",
+      "handle": "mancerabarcelona_official",
+      "value": 1077,
+      "source_url": "https://www.instagram.com/mancerabarcelona_official/",
+      "observed_on": "2026-11-20",
+      "type": "current_account_total",
+      "original_post": "https://www.instagram.com/mancerabarcelona_official/reel/Df5NPGXBEQr/"
+    }
+  ],
+  "fisence_comparison": {
+    "baseline": 672,
+    "baseline_date": "2026-10-19",
+    "baseline_source": "Saved public-account audit dated 2026-10-19",
+    "current": 781,
+    "current_date": "2026-11-20",
+    "absolute_change": 109,
+    "percentage_change": 16.2,
+    "limitations": [
+      "First observation is three days after role start"
+    ],
+    "management": "Account management entirely by Arnau Ruiz",
+    "growth_type": "organic",
+    "growth_type_source": "Confirmed directly by Arnau Ruiz on 2026-11-21: sole account management, no advertising spend"
+  },
+  "unavailable_public_metrics": [
+    "reach",
+    "impressions",
+    "saves",
+    "clicks",
+    "sales",
+    "ROI"
+  ],
+  "credits": "Original photography and video: brands and original authors. Arnau: selection, adaptation, editing, copy, publishing and community management."
+}
